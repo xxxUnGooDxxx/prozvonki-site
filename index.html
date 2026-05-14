@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProZvonki — журнал, статистика, напоминания и SMS-визитка в одной звонилке для Android." />
+  <title>ProZvonki — звонки под контролем</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Pro<span>Zvonki</span></div>
+      <nav class="nav">
+        <a href="#features">Функции</a>
+        <a href="#audience">Для кого</a>
+        <a href="#why">Преимущества</a>
+        <a href="#privacy">Конфиденциальность</a>
+        <a href="#support">Поддержка</a>
+      </nav>
+      <a href="#download" class="btn btn-primary btn-sm">Скачать</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-decor" aria-hidden="true">
+      <div class="decor-circle decor-1"></div>
+      <div class="decor-circle decor-2"></div>
+    </div>
+    <div class="container hero-inner">
+
+      <!-- LEFT: text -->
+      <div class="hero-text">
+        <div class="badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Уже в RuStore
+        </div>
+        <h1>Звонки<br>под контролем</h1>
+        <p class="hero-sub">Журнал, статистика, напоминания и SMS‑визитка в одной звонилке для Android.</p>
+        <div class="hero-buttons" id="download">
+          <a href="#" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Скачать в RuStore
+          </a>
+          <a href="#" class="btn btn-outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Скоро в Google Play
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-num">76</span>
+            <span class="stat-label">Входящих</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num">120</span>
+            <span class="stat-label">Исходящих</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num">49</span>
+            <span class="stat-label">Пропущенных</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: image showcase slider -->
+      <div class="hero-showcase">
+        <div class="showcase-frame" id="showcaseFrame">
+          <div class="showcase-track" id="showcaseTrack">
+            <div class="showcase-slide"><img src="images/00_main.png"        alt="Звонки под контролем"        draggable="false" loading="eager"></div>
+            <div class="showcase-slide"><img src="images/01_perezvon.png"    alt="Напоминание о перезвоне"    draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/02_po_tegu.png"     alt="Поиск звонков по тегу"      draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/03_statistika.png"  alt="Статистика звонков"         draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/04_sms_vizitka.png" alt="SMS-визитка"                draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/05_bezopasnost.png" alt="Безопасность звонков"       draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/06_black_white.png" alt="Светлая и тёмная тема"     draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/07_journal.png"     alt="Удобный журнал звонков"    draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/08_contsact.png"    alt="Всё локально на устройстве" draggable="false" loading="lazy"></div>
+            <div class="showcase-slide"><img src="images/09_reserve.png"     alt="Резерв настроек и звонков" draggable="false" loading="lazy"></div>
+          </div>
+          <!-- Arrows -->
+          <button class="showcase-arrow showcase-arrow-prev" id="showcasePrev" aria-label="Назад">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="showcase-arrow showcase-arrow-next" id="showcaseNext" aria-label="Вперёд">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <!-- Dots + caption -->
+        <div class="showcase-footer">
+          <div class="showcase-dots" id="showcaseDots">
+            <button class="showcase-dot active" aria-label="Слайд 1"></button>
+            <button class="showcase-dot" aria-label="Слайд 2"></button>
+            <button class="showcase-dot" aria-label="Слайд 3"></button>
+            <button class="showcase-dot" aria-label="Слайд 4"></button>
+            <button class="showcase-dot" aria-label="Слайд 5"></button>
+            <button class="showcase-dot" aria-label="Слайд 6"></button>
+            <button class="showcase-dot" aria-label="Слайд 7"></button>
+            <button class="showcase-dot" aria-label="Слайд 8"></button>
+            <button class="showcase-dot" aria-label="Слайд 9"></button>
+            <button class="showcase-dot" aria-label="Слайд 10"></button>
+          </div>
+        </div>
+        <div class="showcase-caption" id="showcaseCaption">Звонки под контролем</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Всё нужное — в одном приложении</h2>
+        <p>Девять функций для удобной и профессиональной работы со звонками</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3>Напоминание о перезвоне</h3>
+          <p>Поставьте уведомление прямо во время вызова и не забудьте перезвонить важному человеку.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <h3>Поиск звонков по тегу</h3>
+          <p>Находите нужные звонки за секунды — просто выберите тег и быстро отфильтруйте историю вызовов.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Статистика звонков</h3>
+          <p>Смотрите входящие, исходящие и пропущенные вызовы в наглядной статистике по дням и неделям.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>SMS-визитка</h3>
+          <p>Отправляйте быстрый ответ на пропущенный звонок с готовыми шаблонами сообщений.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Безопасность звонков</h3>
+          <p>Антифрод-подсказка и отображение региона и оператора прямо на экране входящего вызова.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+          <h3>Удобный журнал звонков</h3>
+          <p>Быстрый поиск, полная история вызовов и действия по каждому звонку в одном экране.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9L1 10"/></svg>
+          </div>
+          <h3>Резерв настроек и звонков</h3>
+          <p>Легко перенесите на новый телефон все настройки, теги и историю звонков одной кнопкой.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <h3>Светлая и тёмная тема</h3>
+          <p>Выбирайте удобный внешний вид приложения днём и ночью — переключается в настройках.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Данные локально</h3>
+          <p>Контакты и журнал вызовов хранятся только на устройстве и не передаются разработчику.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section class="audience section section-light" id="audience">
+    <div class="container">
+      <div class="section-header">
+        <h2>Для кого</h2>
+        <p>ProZvonki создан для людей, у которых много звонков по работе</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="audience-icon">🧑‍💼</div>
+          <div class="audience-title">Предприниматели</div>
+          <div class="audience-desc">Контролируйте коммуникации, не теряйте важные контакты и договорённости</div>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon">📞</div>
+          <div class="audience-title">Специалисты продаж</div>
+          <div class="audience-desc">Ведите историю переговоров, добавляйте теги и комментарии по каждому клиенту</div>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon">🔧</div>
+          <div class="audience-title">Мастера</div>
+          <div class="audience-desc">Фиксируйте детали заказа прямо во время звонка, не теряйте ни одной заявки</div>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon">🚚</div>
+          <div class="audience-title">Курьеры</div>
+          <div class="audience-desc">Быстро отправляйте SMS-визитку, управляйте звонками в движении</div>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon">👔</div>
+          <div class="audience-title">Менеджеры</div>
+          <div class="audience-desc">Анализируйте статистику звонков, планируйте перезвоны и отслеживайте загрузку</div>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon">🧑‍🔬</div>
+          <div class="audience-title">Самозанятые</div>
+          <div class="audience-desc">Профессиональная работа со звонками без корпоративной CRM — в одном приложении</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why section" id="why">
+    <div class="container">
+      <div class="section-header">
+        <h2>Почему удобно</h2>
+        <p>ProZvonki решает реальные задачи, которые не закрывает стандартный дозвонщик</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <div class="why-body">
+            <h3>Важная информация не теряется</h3>
+            <p>Теги, комментарии и заметки остаются привязанными к звонку. Нужный разговор всегда можно найти и вспомнить детали.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <div class="why-body">
+            <h3>Проще возвращаться к пропущенным</h3>
+            <p>Напоминание о перезвоне можно поставить прямо во время вызова — одним нажатием, не выходя из экрана звонка.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <div class="why-body">
+            <h3>Знаете, кто звонит, ещё до ответа</h3>
+            <p>Регион, оператор и антифрод-подсказка на экране входящего вызова — сразу понятно, стоит ли отвечать.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">04</div>
+          <div class="why-body">
+            <h3>Удобно анализировать активность</h3>
+            <p>Статистика показывает вашу реальную загрузку: сколько входящих, исходящих, пропущенных по дням и неделям.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="privacy section section-dark" id="privacy">
+    <div class="container">
+      <div class="privacy-grid">
+        <div class="privacy-card reveal">
+          <div class="privacy-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Всё локально на устройстве</h3>
+          <p>Контакты и журнал вызовов не передаются разработчику. Данные остаются только на вашем телефоне.</p>
+        </div>
+        <div class="privacy-card reveal">
+          <div class="privacy-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Без доступа к содержимому</h3>
+          <p>Приложение не передаёт содержимое звонков и личные данные на собственные серверы.</p>
+        </div>
+        <div class="privacy-card reveal">
+          <div class="privacy-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Только обезличенная аналитика</h3>
+          <p>Для улучшения качества могут использоваться обезличенные аналитические события без личных данных.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="support section" id="support">
+    <div class="container">
+      <div class="support-inner">
+        <h2>Поддержка</h2>
+        <p>Есть вопросы или предложения? Напишите нам — ответим.</p>
+        <a href="mailto:pro.zvonok@yandex.ru" class="support-email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          pro.zvonok@yandex.ru
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">Pro<span>Zvonki</span></div>
+      <nav class="footer-nav">
+        <a href="#privacy">Политика конфиденциальности</a>
+        <a href="#support">Поддержка</a>
+      </nav>
+      <div class="footer-copy">&copy; 2026 ProZvonki</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
