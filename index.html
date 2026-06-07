@@ -1,340 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ProZvonki — журнал, статистика, напоминания и SMS-визитка в одной звонилке для Android." />
-  <title>ProZvonki — звонки под контролем</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProZvonki - звонилка для важных звонков, CRM и отчетов</title>
+  <meta name="description" content="ProZvonki - Android-звонилка с умным журналом, напоминаниями, мини-CRM, защитой от лишних звонков и отчетами по звонкам.">
+  <meta property="og:title" content="ProZvonki - звонки, которые не теряются">
+  <meta property="og:description" content="Умный журнал, напоминания, CRM-задачи и отчеты по звонкам в одном Android-приложении.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">Pro<span>Zvonki</span></div>
-      <nav class="nav">
-        <a href="#features">Функции</a>
-        <a href="#audience">Для кого</a>
-        <a href="#why">Преимущества</a>
-        <a href="#privacy">Конфиденциальность</a>
-        <a href="#support">Поддержка</a>
-      </nav>
-      <a href="#download" class="btn btn-primary btn-sm">Скачать</a>
-    </div>
+    <a class="brand" href="#top" aria-label="ProZvonki"><span class="brand-mark"><img src="ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Навигация">
+      <a href="#home-use">Для себя</a>
+      <a href="#workflow">Для работы</a>
+      <a href="#reports">Отчеты</a>
+      <a href="#privacy">Приватность</a>
+    </nav>
+    <a class="header-link" href="#download">Скачать</a>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-decor" aria-hidden="true">
-      <div class="decor-circle decor-1"></div>
-      <div class="decor-circle decor-2"></div>
-    </div>
-    <div class="container hero-inner">
-
-      <!-- LEFT: text -->
-      <div class="hero-text">
-        <div class="badge">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Уже в RuStore
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Звонилка для Android</p>
+        <h1>Звонки, которые не теряются</h1>
+        <p class="hero-lead">ProZvonki заменяет обычную звонилку: показывает важные пропущенные, помогает вовремя перезвонить, хранит контекст разговора и собирает отчеты.</p>
+        <div class="store-row" aria-label="Скачать приложение">
+          <a class="store-badge store-badge-google" href="https://play.google.com/store/apps/details?id=ru.prozvonki.phone&amp;hl=ru" target="_blank" rel="noopener" aria-label="Скачать в Google Play"><img src="google_play_badge.svg" alt="Get it on Google Play"></a>
+          <a class="store-badge store-badge-rustore" href="https://www.rustore.ru/catalog/app/ru.prozvonki.phone" target="_blank" rel="noopener" aria-label="Скачать в RuStore"><img src="rustore_badge.svg" alt="Скачать в RuStore"></a>
         </div>
-        <h1>Звонки<br>под контролем</h1>
-        <p class="hero-sub">Журнал, статистика, напоминания и SMS‑визитка в одной звонилке для Android.</p>
-        <div class="hero-buttons" id="download">
-          <a href="#" class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Скачать в RuStore
-          </a>
-          <a href="#" class="btn btn-outline">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Скоро в Google Play
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="stat-num">76</span>
-            <span class="stat-label">Входящих</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">120</span>
-            <span class="stat-label">Исходящих</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">49</span>
-            <span class="stat-label">Пропущенных</span>
-          </div>
+        <div class="hero-proof" aria-label="Ключевые сценарии">
+          <span>Удобный экран звонка</span>
+          <span>Пропущенные под контролем</span>
+          <span>CRM и XLSX-отчеты</span>
         </div>
       </div>
-
-      <!-- RIGHT: image showcase slider -->
-      <div class="hero-showcase">
-        <div class="showcase-frame" id="showcaseFrame">
-          <div class="showcase-track" id="showcaseTrack">
-            <div class="showcase-slide"><img src="images/00_main.png"        alt="Звонки под контролем"        draggable="false" loading="eager"></div>
-            <div class="showcase-slide"><img src="images/01_perezvon.png"    alt="Напоминание о перезвоне"    draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/02_po_tegu.png"     alt="Поиск звонков по тегу"      draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/03_statistika.png"  alt="Статистика звонков"         draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/04_sms_vizitka.png" alt="SMS-визитка"                draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/05_bezopasnost.png" alt="Безопасность звонков"       draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/06_black_white.png" alt="Светлая и тёмная тема"     draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/07_journal.png"     alt="Удобный журнал звонков"    draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/08_contsact.png"    alt="Всё локально на устройстве" draggable="false" loading="lazy"></div>
-            <div class="showcase-slide"><img src="images/09_reserve.png"     alt="Резерв настроек и звонков" draggable="false" loading="lazy"></div>
-          </div>
-          <!-- Arrows -->
-          <button class="showcase-arrow showcase-arrow-prev" id="showcasePrev" aria-label="Назад">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button class="showcase-arrow showcase-arrow-next" id="showcaseNext" aria-label="Вперёд">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
+      <div class="screen-carousel hero-carousel" data-carousel aria-label="Главные экраны приложения">
+        <div class="carousel-viewport">
+          <figure class="carousel-slide is-active">
+            <img src="скрины для обычных людей/входящий звонок.png" alt="Входящий звонок в ProZvonki">
+            <figcaption><strong>Понятный входящий</strong><span>Сразу видно, кто звонит и какие действия доступны.</span></figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="скрины для обычных людей/журнал звонков.png" alt="Журнал звонков ProZvonki" loading="lazy">
+            <figcaption><strong>Журнал с контекстом</strong><span>Пропущенные, комментарии, статусы и быстрый перезвон.</span></figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="скрины для бизнес аудитории/задачи в crm.png" alt="CRM-задачи из звонков" loading="lazy">
+            <figcaption><strong>Задачи из звонков</strong><span>Важный звонок превращается в понятное действие.</span></figcaption>
+          </figure>
         </div>
-
-        <!-- Dots + caption -->
-        <div class="showcase-footer">
-          <div class="showcase-dots" id="showcaseDots">
-            <button class="showcase-dot active" aria-label="Слайд 1"></button>
-            <button class="showcase-dot" aria-label="Слайд 2"></button>
-            <button class="showcase-dot" aria-label="Слайд 3"></button>
-            <button class="showcase-dot" aria-label="Слайд 4"></button>
-            <button class="showcase-dot" aria-label="Слайд 5"></button>
-            <button class="showcase-dot" aria-label="Слайд 6"></button>
-            <button class="showcase-dot" aria-label="Слайд 7"></button>
-            <button class="showcase-dot" aria-label="Слайд 8"></button>
-            <button class="showcase-dot" aria-label="Слайд 9"></button>
-            <button class="showcase-dot" aria-label="Слайд 10"></button>
-          </div>
-        </div>
-        <div class="showcase-caption" id="showcaseCaption">Звонки под контролем</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features section" id="features">
-    <div class="container">
-      <div class="section-header">
-        <h2>Всё нужное — в одном приложении</h2>
-        <p>Девять функций для удобной и профессиональной работы со звонками</p>
-      </div>
-      <div class="features-grid">
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>Напоминание о перезвоне</h3>
-          <p>Поставьте уведомление прямо во время вызова и не забудьте перезвонить важному человеку.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-          </div>
-          <h3>Поиск звонков по тегу</h3>
-          <p>Находите нужные звонки за секунды — просто выберите тег и быстро отфильтруйте историю вызовов.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <h3>Статистика звонков</h3>
-          <p>Смотрите входящие, исходящие и пропущенные вызовы в наглядной статистике по дням и неделям.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3>SMS-визитка</h3>
-          <p>Отправляйте быстрый ответ на пропущенный звонок с готовыми шаблонами сообщений.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Безопасность звонков</h3>
-          <p>Антифрод-подсказка и отображение региона и оператора прямо на экране входящего вызова.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          </div>
-          <h3>Удобный журнал звонков</h3>
-          <p>Быстрый поиск, полная история вызовов и действия по каждому звонку в одном экране.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9L1 10"/></svg>
-          </div>
-          <h3>Резерв настроек и звонков</h3>
-          <p>Легко перенесите на новый телефон все настройки, теги и историю звонков одной кнопкой.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </div>
-          <h3>Светлая и тёмная тема</h3>
-          <p>Выбирайте удобный внешний вид приложения днём и ночью — переключается в настройках.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-icon-wrap green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-          </div>
-          <h3>Данные локально</h3>
-          <p>Контакты и журнал вызовов хранятся только на устройстве и не передаются разработчику.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- AUDIENCE -->
-  <section class="audience section section-light" id="audience">
-    <div class="container">
-      <div class="section-header">
-        <h2>Для кого</h2>
-        <p>ProZvonki создан для людей, у которых много звонков по работе</p>
-      </div>
-      <div class="audience-grid">
-        <div class="audience-card reveal">
-          <div class="audience-icon">🧑‍💼</div>
-          <div class="audience-title">Предприниматели</div>
-          <div class="audience-desc">Контролируйте коммуникации, не теряйте важные контакты и договорённости</div>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-icon">📞</div>
-          <div class="audience-title">Специалисты продаж</div>
-          <div class="audience-desc">Ведите историю переговоров, добавляйте теги и комментарии по каждому клиенту</div>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-icon">🔧</div>
-          <div class="audience-title">Мастера</div>
-          <div class="audience-desc">Фиксируйте детали заказа прямо во время звонка, не теряйте ни одной заявки</div>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-icon">🚚</div>
-          <div class="audience-title">Курьеры</div>
-          <div class="audience-desc">Быстро отправляйте SMS-визитку, управляйте звонками в движении</div>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-icon">👔</div>
-          <div class="audience-title">Менеджеры</div>
-          <div class="audience-desc">Анализируйте статистику звонков, планируйте перезвоны и отслеживайте загрузку</div>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-icon">🧑‍🔬</div>
-          <div class="audience-title">Самозанятые</div>
-          <div class="audience-desc">Профессиональная работа со звонками без корпоративной CRM — в одном приложении</div>
+        <div class="carousel-controls">
+          <button type="button" data-prev aria-label="Предыдущий экран">‹</button>
+          <div class="carousel-dots" data-dots></div>
+          <button type="button" data-next aria-label="Следующий экран">›</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHY -->
-  <section class="why section" id="why">
-    <div class="container">
-      <div class="section-header">
-        <h2>Почему удобно</h2>
-        <p>ProZvonki решает реальные задачи, которые не закрывает стандартный дозвонщик</p>
+    <section class="choice-band" aria-label="Два сценария использования">
+      <a href="#home-use"><span>01</span><strong>Для обычных звонков</strong><p>Быстрее отвечать, звонить, находить контакты и блокировать лишние номера.</p></a>
+      <a href="#workflow"><span>02</span><strong>Для работы с клиентами</strong><p>Понимать, кому не перезвонили, вести задачи и отправлять отчеты.</p></a>
+    </section>
+
+    <section id="home-use" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Для себя</p>
+        <h2>Обычная звонилка, только удобнее</h2>
+        <p>Без лишней сложности: звонки, контакты, избранное, быстрый набор, журнал и защита от нежелательных вызовов.</p>
       </div>
-      <div class="why-list">
-        <div class="why-item reveal">
-          <div class="why-num">01</div>
-          <div class="why-body">
-            <h3>Важная информация не теряется</h3>
-            <p>Теги, комментарии и заметки остаются привязанными к звонку. Нужный разговор всегда можно найти и вспомнить детали.</p>
-          </div>
+      <div class="split-layout">
+        <div class="text-stack">
+          <article><span>Звонки</span><h3>Отвечайте и управляйте разговором без поиска нужных кнопок</h3><p>Активный звонок, второй входящий, динамик, Bluetooth и клавиатура всегда в понятном месте.</p></article>
+          <article><span>Контакты</span><h3>Частые люди ближе</h3><p>Избранное, быстрый набор 1-9 и карточки контактов помогают звонить быстрее.</p></article>
+          <article><span>Защита</span><h3>Меньше спама и случайных вызовов</h3><p>Черный список, блокировка неизвестных и рейтинг номера помогают решить, отвечать или нет.</p></article>
         </div>
-        <div class="why-item reveal">
-          <div class="why-num">02</div>
-          <div class="why-body">
-            <h3>Проще возвращаться к пропущенным</h3>
-            <p>Напоминание о перезвоне можно поставить прямо во время вызова — одним нажатием, не выходя из экрана звонка.</p>
+        <div class="screen-carousel" data-carousel aria-label="Экраны обычной звонилки">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/активный звонок.png" alt="Активный звонок" loading="lazy"><figcaption><strong>Активный звонок</strong><span>Основные действия во время разговора под рукой.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/диалпад.png" alt="Диалпад и быстрый набор" loading="lazy"><figcaption><strong>Диалпад и быстрый набор</strong><span>Назначайте частые контакты на цифры.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/рейтинг номера.png" alt="Рейтинг номера" loading="lazy"><figcaption><strong>Репутация номера</strong><span>Предупреждения и категории нежелательных звонков.</span></figcaption></figure>
           </div>
-        </div>
-        <div class="why-item reveal">
-          <div class="why-num">03</div>
-          <div class="why-body">
-            <h3>Знаете, кто звонит, ещё до ответа</h3>
-            <p>Регион, оператор и антифрод-подсказка на экране входящего вызова — сразу понятно, стоит ли отвечать.</p>
-          </div>
-        </div>
-        <div class="why-item reveal">
-          <div class="why-num">04</div>
-          <div class="why-body">
-            <h3>Удобно анализировать активность</h3>
-            <p>Статистика показывает вашу реальную загрузку: сколько входящих, исходящих, пропущенных по дням и неделям.</p>
-          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRIVACY -->
-  <section class="privacy section section-dark" id="privacy">
-    <div class="container">
+    <section class="section section-soft">
+      <div class="section-head narrow">
+        <p class="eyebrow">Журнал</p>
+        <h2>Контекст звонка не пропадает после разговора</h2>
+        <p>В журнале видны повторные вызовы, комментарии, теги, важность, статусы и карточка звонка с быстрыми действиями.</p>
+      </div>
+      <div class="split-layout reverse">
+        <div class="journal-points">
+          <div><strong>Найти разговор</strong><span>По номеру, имени, статусу или тегу.</span></div>
+          <div><strong>Сохранить итог</strong><span>Комментарий и важность остаются рядом со звонком.</span></div>
+          <div><strong>Действовать сразу</strong><span>Перезвонить, добавить контакт, заблокировать или открыть карточку.</span></div>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="Журнал и карточка звонка">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/журнал звонков.png" alt="Умный журнал звонков" loading="lazy"><figcaption><strong>Умный журнал</strong><span>Повторные вызовы и статусы собраны в одном месте.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/карточка звонка.png" alt="Карточка звонка" loading="lazy"><figcaption><strong>Карточка звонка</strong><span>Комментарий, действия, контакт и важность.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow-section">
+      <div class="section-head">
+        <p class="eyebrow">Для работы</p>
+        <h2>Пропущенный звонок превращается в понятную задачу</h2>
+        <p>Если вы работаете с клиентами, важен не сам список функций, а цепочка: увидеть пропущенный, запланировать перезвон, зафиксировать итог и проверить отчет.</p>
+      </div>
+      <div class="workflow">
+        <article><span>1</span><h3>Увидеть</h3><p>Журнал показывает звонки, которые еще требуют реакции.</p></article>
+        <article><span>2</span><h3>Запланировать</h3><p>Создайте задачу или напоминание о перезвоне.</p></article>
+        <article><span>3</span><h3>Закрыть</h3><p>Оставьте комментарий и отметьте результат общения.</p></article>
+        <article><span>4</span><h3>Проверить</h3><p>Отчет покажет, где остались необработанные звонки.</p></article>
+      </div>
+      <div class="screen-carousel wide-carousel" data-carousel aria-label="Рабочий сценарий">
+        <div class="carousel-viewport">
+          <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/задачи в crm.png" alt="CRM-задачи из звонков" loading="lazy"><figcaption><strong>Задачи в CRM</strong><span>Видно, какие звонки требуют внимания.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/планирование задачи.png" alt="Планирование задачи" loading="lazy"><figcaption><strong>Планирование</strong><span>Срок, комментарий и следующий шаг.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.png" alt="Отчеты по звонкам" loading="lazy"><figcaption><strong>Отчет</strong><span>Проверка перезвонов и проблемных обращений.</span></figcaption></figure>
+        </div>
+        <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
+      </div>
+    </section>
+
+    <section id="crm" class="section">
+      <div class="split-layout">
+        <div>
+          <p class="eyebrow">Мини-CRM</p>
+          <h2>После звонка понятно, что делать дальше</h2>
+          <p class="lead-copy">CRM появляется там, где нужна: в задачах, карточке клиента, комментариях, истории и планировании следующего контакта.</p>
+          <ul class="plain-list">
+            <li>Автосоздание задач по типу звонка.</li>
+            <li>Статусы: требует внимания, в работе, запланировано, закрыто.</li>
+            <li>Личные и рабочие контакты разделяются.</li>
+          </ul>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="CRM-экраны">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/карточка клиента.png" alt="Карточка клиента в CRM" loading="lazy"><figcaption><strong>Карточка клиента</strong><span>История, задачи, комментарии и данные клиента.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/личные и бизнес контакты.png" alt="Личные и бизнес контакты" loading="lazy"><figcaption><strong>Личное и рабочее</strong><span>CRM не мешает обычным личным звонкам.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" class="section section-soft">
+      <div class="section-head">
+        <p class="eyebrow">Отчеты и статистика</p>
+        <h2>Результат звонков видно в цифрах</h2>
+        <p>Статистика помогает понять нагрузку, а XLSX/CSV-отчеты показывают, где были звонки, перезвоны и проблемы.</p>
+      </div>
+      <div class="split-layout">
+        <div class="text-stack">
+          <article><span>Отчет</span><h3>За день, неделю или месяц</h3><p>Сводка, полный список звонков, необработанные обращения, перезвоны и разбивка по дням.</p></article>
+          <article><span>Email</span><h3>Автоотправка по расписанию</h3><p>Отчет можно отправить вручную или настроить расписание через вашу почту.</p></article>
+          <article><span>Фильтры</span><h3>Только нужные рабочие звонки</h3><p>SIM, тип звонка, длительность и контакты помогают анализировать нужный сегмент.</p></article>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="Отчеты и статистика">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/статистика звонков.png" alt="Статистика звонков" loading="lazy"><figcaption><strong>Статистика</strong><span>Активность и фильтры по звонкам.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.png" alt="Excel-отчеты по звонкам" loading="lazy"><figcaption><strong>XLSX-отчеты</strong><span>Сводка, перезвоны и проблемные звонки.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/sms визитка.png" alt="SMS-визитка после звонка" loading="lazy"><figcaption><strong>SMS-визитка</strong><span>Короткое сообщение клиенту после звонка.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section privacy-section">
+      <div class="section-head">
+        <p class="eyebrow">Приватность</p>
+        <h2>Данные остаются под вашим контролем</h2>
+        <p>Приложение работает с чувствительными вещами: звонками, контактами, журналом, SMS и рабочими заметками. Поэтому важны понятные границы.</p>
+      </div>
       <div class="privacy-grid">
-        <div class="privacy-card reveal">
-          <div class="privacy-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-          </div>
-          <h3>Всё локально на устройстве</h3>
-          <p>Контакты и журнал вызовов не передаются разработчику. Данные остаются только на вашем телефоне.</p>
-        </div>
-        <div class="privacy-card reveal">
-          <div class="privacy-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Без доступа к содержимому</h3>
-          <p>Приложение не передаёт содержимое звонков и личные данные на собственные серверы.</p>
-        </div>
-        <div class="privacy-card reveal">
-          <div class="privacy-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Только обезличенная аналитика</h3>
-          <p>Для улучшения качества могут использоваться обезличенные аналитические события без личных данных.</p>
+        <article><h3>Локальные данные</h3><p>Журнал, теги, черный список, комментарии и CRM-данные хранятся на устройстве.</p></article>
+        <article><h3>Защищенный бэкап</h3><p>Резервную копию можно сохранить в файл `.prozbak` и защитить паролем.</p></article>
+        <article><h3>Разные версии</h3><p>Пересылка SMS на email доступна только в RuStore-версии и включается вручную.</p></article>
+      </div>
+    </section>
+
+    <section class="section store-section">
+      <div class="store-compare">
+        <div><p class="eyebrow">Версии приложения</p><h2>Google Play или RuStore</h2><p>Основные функции звонилки, журнала, CRM и отчетов доступны в обеих версиях. RuStore-версия дополнительно включает бета-функцию пересылки входящих SMS на email.</p></div>
+        <div class="compare-list" aria-label="Сравнение версий">
+          <div><span>Звонилка, журнал, контакты</span><strong>Обе версии</strong></div>
+          <div><span>CRM, статистика, отчеты</span><strong>Обе версии</strong></div>
+          <div><span>SMS на email</span><strong>RuStore, бета</strong></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SUPPORT -->
-  <section class="support section" id="support">
-    <div class="container">
-      <div class="support-inner">
-        <h2>Поддержка</h2>
-        <p>Есть вопросы или предложения? Напишите нам — ответим.</p>
-        <a href="mailto:pro.zvonok@yandex.ru" class="support-email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          pro.zvonok@yandex.ru
-        </a>
+    <section id="download" class="download-section">
+      <div><p class="eyebrow">Скачать</p><h2>Попробуйте ProZvonki на своем телефоне</h2><p>Выберите магазин. После установки приложение попросит разрешения для звонков, контактов, уведомлений и тех функций, которые вы включите.</p></div>
+      <div class="store-row">
+        <a class="store-badge store-badge-google" href="https://play.google.com/store/apps/details?id=ru.prozvonki.phone&amp;hl=ru" target="_blank" rel="noopener" aria-label="Скачать в Google Play"><img src="google_play_badge.svg" alt="Get it on Google Play"></a>
+        <a class="store-badge store-badge-rustore" href="https://www.rustore.ru/catalog/app/ru.prozvonki.phone" target="_blank" rel="noopener" aria-label="Скачать в RuStore"><img src="rustore_badge.svg" alt="Скачать в RuStore"></a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">Pro<span>Zvonki</span></div>
-      <nav class="footer-nav">
-        <a href="#privacy">Политика конфиденциальности</a>
-        <a href="#support">Поддержка</a>
-      </nav>
-      <div class="footer-copy">&copy; 2026 ProZvonki</div>
-    </div>
-  </footer>
+  <footer class="site-footer"><strong>ProZvonki</strong><span>Android-звонилка для звонков, которые нельзя потерять.</span></footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+      const dotsHost = carousel.querySelector('[data-dots]');
+      const prev = carousel.querySelector('[data-prev]');
+      const next = carousel.querySelector('[data-next]');
+      let index = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+      let timer = null;
+
+      const dots = slides.map((_, dotIndex) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Показать экран ${dotIndex + 1}`);
+        button.addEventListener('click', () => {
+          show(dotIndex);
+          restart();
+        });
+        dotsHost.appendChild(button);
+        return button;
+      });
+
+      function show(nextIndex) {
+        index = (nextIndex + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === index));
+        dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+      }
+
+      function restart() {
+        window.clearInterval(timer);
+        timer = window.setInterval(() => show(index + 1), 5200);
+      }
+
+      prev.addEventListener('click', () => {
+        show(index - 1);
+        restart();
+      });
+      next.addEventListener('click', () => {
+        show(index + 1);
+        restart();
+      });
+      carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+      carousel.addEventListener('mouseleave', restart);
+      carousel.addEventListener('focusin', () => window.clearInterval(timer));
+      carousel.addEventListener('focusout', restart);
+      show(index);
+      restart();
+    });
+  </script>
 </body>
 </html>
