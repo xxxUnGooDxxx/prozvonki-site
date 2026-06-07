@@ -271,7 +271,7 @@ p { margin: 0; }
   border-radius: 8px;
   color: var(--green-dark);
   background: #e8f7ee;
-  vertical-align: -.22em;
+  vertical-align: -.12em;
 }
 .content-main h2 .item-icon svg {
   display: block;
