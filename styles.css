@@ -264,23 +264,23 @@ p { margin: 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 34px;
-  width: 34px;
-  height: 34px;
-  margin: 0 12px 0 0;
+  flex: 0 0 1.35em;
+  width: 1.35em;
+  height: 1.35em;
+  margin: 0 .38em 0 0;
   border-radius: 8px;
   color: var(--green-dark);
   background: #e8f7ee;
-  vertical-align: -5px;
+  vertical-align: -.22em;
 }
 .content-main h2 .item-icon svg {
   display: block;
-  width: 19px !important;
-  height: 19px !important;
-  min-width: 19px;
-  max-width: 19px;
-  min-height: 19px;
-  max-height: 19px;
+  width: .72em !important;
+  height: .72em !important;
+  min-width: .72em;
+  max-width: .72em;
+  min-height: .72em;
+  max-height: .72em;
   stroke-width: 2.4;
 }
 .content-main h3 { font-size: clamp(20px, 2.2vw, 26px); }
@@ -319,8 +319,7 @@ p { margin: 0; }
   .seo-page-hero h1 { font-size: 32px; line-height: 1.08; max-width: 100%; }
   .content-main h2 { font-size: 26px; line-height: 1.16; }
   .content-main p, .content-main li { font-size: 16px; }
-  .content-main h2 .item-icon { width: 30px; height: 30px; margin-right: 9px; vertical-align: -6px; }
-  .content-main h2 .item-icon svg { width: 17px; height: 17px; }
+  .content-main h2 .item-icon { border-radius: 7px; }
   .seo-page-hero, .content-main, .content-grid { width: 100%; max-width: 100%; overflow: hidden; }
   .seo-page-hero h1, .content-main h2, .content-main h3, .content-main p, .content-main li { width: 100%; max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
   .seo-page-hero > *, .section .content-grid, .content-main > *, .side-card { max-width: calc(100vw - 56px) !important; }
