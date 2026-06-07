@@ -261,8 +261,10 @@ p { margin: 0; }
 .content-main article { display: grid; gap: 10px; }
 .content-main h2 { font-size: clamp(28px, 3.8vw, 46px); }
 .content-main h2 .item-icon {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
   width: 34px;
   height: 34px;
   margin: 0 12px 0 0;
@@ -271,7 +273,16 @@ p { margin: 0; }
   background: #e8f7ee;
   vertical-align: -5px;
 }
-.content-main h2 .item-icon svg { width: 19px; height: 19px; stroke-width: 2.4; }
+.content-main h2 .item-icon svg {
+  display: block;
+  width: 19px !important;
+  height: 19px !important;
+  min-width: 19px;
+  max-width: 19px;
+  min-height: 19px;
+  max-height: 19px;
+  stroke-width: 2.4;
+}
 .content-main h3 { font-size: clamp(20px, 2.2vw, 26px); }
 .content-main p, .content-main li { color: var(--muted); font-size: 18px; }
 .content-main ul { display: grid; gap: 12px; margin: 0; padding-left: 22px; }
