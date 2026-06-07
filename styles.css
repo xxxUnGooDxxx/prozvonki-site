@@ -222,6 +222,36 @@ p { margin: 0; }
 .site-footer strong { color: var(--ink); }
 .seo-page-hero { padding: clamp(58px, 7vw, 96px) clamp(20px, 5vw, 72px); background: radial-gradient(circle at 88% 28%, rgba(21,152,93,.12), transparent 34%), linear-gradient(180deg, #fff 0%, #f7fcf9 100%); }
 .seo-page-hero .lead-copy { max-width: 880px; }
+.seo-visual { padding: clamp(28px, 5vw, 54px) clamp(20px, 5vw, 72px) 0; background: #fff; }
+.seo-slideshow {
+  position: relative;
+  width: min(100%, 860px);
+  min-height: clamp(320px, 42vw, 560px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.seo-slideshow figure {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  opacity: 0;
+  animation: seoSlide 15s infinite;
+}
+.seo-slideshow figure:nth-child(2) { animation-delay: 5s; }
+.seo-slideshow figure:nth-child(3) { animation-delay: 10s; }
+.seo-slideshow img {
+  max-width: 100%;
+  max-height: clamp(300px, 40vw, 520px);
+  object-fit: contain;
+  filter: drop-shadow(0 28px 44px rgba(10,66,40,.16));
+}
+@keyframes seoSlide {
+  0%, 28% { opacity: 1; transform: translateX(0); }
+  34%, 94% { opacity: 0; transform: translateX(-18px); }
+  95%, 100% { opacity: 0; transform: translateX(18px); }
+}
 .breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; color: var(--muted); font-size: 14px; }
 .breadcrumb a { color: var(--green-dark); font-weight: 800; }
 .content-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(300px, .55fr); gap: clamp(32px, 6vw, 78px); align-items: start; }
@@ -256,6 +286,9 @@ p { margin: 0; }
   h2 { font-size: clamp(28px, 7.4vw, 34px); line-height: 1.1; }
   h3 { font-size: 19px; line-height: 1.2; }
   .seo-page-hero { padding-left: 22px; padding-right: 22px; }
+  .seo-visual { padding-left: 18px; padding-right: 18px; }
+  .seo-slideshow { width: 300px; max-width: 100%; min-height: 330px; }
+  .seo-slideshow img { max-width: 300px; max-height: 310px; }
   .seo-page-hero h1 { font-size: 32px; line-height: 1.08; max-width: 100%; }
   .content-main h2 { font-size: 26px; line-height: 1.16; }
   .content-main p, .content-main li { font-size: 16px; }
