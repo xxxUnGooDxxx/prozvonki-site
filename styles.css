@@ -264,32 +264,32 @@ p { margin: 0; }
 .content-grid-single::before {
   content: "";
   position: absolute;
-  top: 12px;
-  right: min(8vw, 120px);
-  width: 1px;
-  height: min(74%, 460px);
+  top: 22px;
+  right: min(7vw, 110px);
+  width: min(22vw, 300px);
+  height: min(70%, 430px);
   pointer-events: none;
-  background: linear-gradient(180deg, transparent, rgba(21,152,93,.22) 14%, rgba(21,152,93,.22) 86%, transparent);
+  opacity: .48;
+  background:
+    radial-gradient(circle at 28% 4%, rgba(21,152,93,.34) 0 15px, transparent 16px),
+    radial-gradient(circle at 70% 25%, rgba(21,152,93,.25) 0 15px, transparent 16px),
+    radial-gradient(circle at 32% 47%, rgba(21,152,93,.28) 0 15px, transparent 16px),
+    radial-gradient(circle at 74% 69%, rgba(21,152,93,.22) 0 15px, transparent 16px),
+    radial-gradient(circle at 36% 91%, rgba(21,152,93,.24) 0 15px, transparent 16px);
 }
 .content-grid-single::after {
-  content: "☎\A◷\A☷\A◇";
+  content: "";
   position: absolute;
-  top: 28px;
-  right: calc(min(8vw, 120px) - 20px);
-  width: 40px;
-  height: min(68%, 420px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--green-dark);
-  font-size: 20px;
-  line-height: 1;
-  white-space: pre;
+  top: 30px;
+  right: min(7vw, 110px);
+  width: min(22vw, 300px);
+  height: min(62%, 380px);
   pointer-events: none;
-  text-shadow:
-    0 0 0 #fff,
-    0 12px 30px rgba(21,152,93,.12);
+  opacity: .32;
+  background:
+    radial-gradient(82% 120% at 50% -15%, transparent 62%, rgba(21,152,93,.55) 63% 65%, transparent 66%) 22% 0 / 128px 94px repeat-y;
+  transform: rotate(-2deg);
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
 }
 .content-main { display: grid; gap: 26px; }
 .content-main article { display: grid; gap: 10px; }
