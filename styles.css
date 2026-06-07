@@ -256,6 +256,7 @@ p { margin: 0; }
 .breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; color: var(--muted); font-size: 14px; }
 .breadcrumb a { color: var(--green-dark); font-weight: 800; }
 .content-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(300px, .55fr); gap: clamp(32px, 6vw, 78px); align-items: start; }
+.content-grid-single { grid-template-columns: minmax(0, 980px); }
 .content-main { display: grid; gap: 26px; }
 .content-main h2 { font-size: clamp(28px, 3.8vw, 46px); }
 .content-main h3 { font-size: clamp(20px, 2.2vw, 26px); }
