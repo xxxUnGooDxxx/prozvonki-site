@@ -281,26 +281,26 @@ p { margin: 0; }
   z-index: 2;
 }
 .content-main article:nth-child(even)::before { right: calc(-1 * min(12vw, 170px)); }
-.content-main article:not(:last-child)::after {
-  content: "";
+.content-main article::after {
+  content: "☎";
   position: absolute;
-  right: calc(-1 * min(17vw, 245px));
-  top: 48px;
-  width: min(8vw, 120px);
-  height: calc(100% + 18px);
-  border-right: 3px solid rgba(21,152,93,.20);
-  border-bottom: 3px solid rgba(21,152,93,.20);
-  border-radius: 0 0 70px 0;
-  transform: skewX(-18deg);
+  right: calc(-1 * min(18vw, 260px) + 10px);
+  top: 14px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  color: rgba(8,107,66,.42);
+  font-size: 19px;
+  line-height: 1;
   pointer-events: none;
+  z-index: 3;
 }
-.content-main article:nth-child(even):not(:last-child)::after {
-  right: calc(-1 * min(17vw, 245px));
-  border-right: 0;
-  border-left: 3px solid rgba(21,152,93,.20);
-  border-radius: 0 0 0 70px;
-  transform: skewX(18deg);
-}
+.content-main article:nth-child(even)::after { right: calc(-1 * min(12vw, 170px) + 10px); }
+.content-main article:nth-child(2)::after { content: "◷"; }
+.content-main article:nth-child(3)::after { content: "☷"; }
+.content-main article:nth-child(4)::after { content: "◇"; }
+.content-main article:nth-child(5)::after { content: "↗"; }
 .content-main h2 { font-size: clamp(28px, 3.8vw, 46px); }
 .content-main h2 .item-icon {
   display: inline-flex;
