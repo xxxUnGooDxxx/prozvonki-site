@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xxxungoodxxx.github.io/prozvonki-site/sitemap.xml
