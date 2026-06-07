@@ -39,7 +39,8 @@ img { display: block; max-width: 100%; }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
 .top-nav { display: flex; gap: clamp(14px, 2.4vw, 32px); color: var(--muted); font-size: 14px; }
 .top-nav a:hover { color: var(--green-dark); }
-.header-link { min-height: 42px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 8px; background: var(--ink); color: #fff; font-weight: 800; font-size: 14px; }
+.header-link { min-height: 42px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 8px; background: var(--green); color: #fff; font-weight: 800; font-size: 14px; box-shadow: 0 12px 28px rgba(21,152,93,.18); }
+.header-link:hover { background: var(--green-dark); }
 
 .hero {
   min-height: 760px;
@@ -268,35 +269,24 @@ p { margin: 0; }
 .content-main { display: grid; gap: 26px; }
 .content-main article { position: relative; display: grid; gap: 10px; }
 .content-main article::before {
-  content: "";
-  position: absolute;
-  right: calc(-1 * min(18vw, 260px));
-  top: 8px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(21,152,93,.18);
-  box-shadow: inset 0 0 0 12px rgba(21,152,93,.14);
-  pointer-events: none;
-  z-index: 2;
+  display: none;
 }
-.content-main article:nth-child(even)::before { right: calc(-1 * min(12vw, 170px)); }
 .content-main article::after {
   content: "☎";
   position: absolute;
-  right: calc(-1 * min(18vw, 260px) + 10px);
-  top: 14px;
-  width: 24px;
-  height: 24px;
+  right: calc(-1 * min(18vw, 260px));
+  top: -2px;
+  width: 58px;
+  height: 58px;
   display: grid;
   place-items: center;
-  color: rgba(8,107,66,.42);
-  font-size: 19px;
+  color: rgba(8,107,66,.18);
+  font-size: 50px;
   line-height: 1;
   pointer-events: none;
   z-index: 3;
 }
-.content-main article:nth-child(even)::after { right: calc(-1 * min(12vw, 170px) + 10px); }
+.content-main article:nth-child(even)::after { right: calc(-1 * min(12vw, 170px)); }
 .content-main article:nth-child(2)::after { content: "◷"; }
 .content-main article:nth-child(3)::after { content: "☷"; }
 .content-main article:nth-child(4)::after { content: "◇"; }
