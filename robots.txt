@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xxxungoodxxx.github.io/prozvonki-site/sitemap.xml
+Sitemap: https://pro-zvonki.ru/sitemap.xml
