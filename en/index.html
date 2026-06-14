@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProZvonki — Android dialer with CRM, tasks and call reports</title>
+  <meta name="description" content="ProZvonki helps you never miss important calls: a call log with context, CRM, post-call tasks, comments, reminders and reports for Android.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xxxungoodxxx.github.io/prozvonki-site/en/">
+  <link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/">
+  <link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/">
+  <link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xxxungoodxxx.github.io/prozvonki-site/en/">
+  <meta property="og:title" content="ProZvonki — Android dialer with CRM and reports">
+  <meta property="og:description" content="Never miss important calls: a call log with context, tasks, comments, CRM, reminders and reports.">
+  <meta property="og:image" content="https://xxxungoodxxx.github.io/prozvonki-site/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ProZvonki — Android dialer with CRM and reports">
+  <meta name="twitter:description" content="A call log with context, post-call tasks, comments, CRM and reports in an Android dialer.">
+  <meta name="twitter:image" content="https://xxxungoodxxx.github.io/prozvonki-site/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- AOS (Animate On Scroll) — appearance on scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Extra animations -->
+  <link rel="stylesheet" href="../animations.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895', 'ym');
+
+    ym(109706895, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://xxxungoodxxx.github.io/prozvonki-site/en/#website",
+          "name": "ProZvonki",
+          "url": "https://xxxungoodxxx.github.io/prozvonki-site/en/",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://xxxungoodxxx.github.io/prozvonki-site/en/#app",
+          "name": "ProZvonki",
+          "applicationCategory": "CommunicationApplication",
+          "operatingSystem": "Android",
+          "description": "Android dialer with CRM, tasks, comments, a call log and reports.",
+          "url": "https://xxxungoodxxx.github.io/prozvonki-site/en/",
+          "downloadUrl": [
+            "https://play.google.com/store/apps/details?id=ru.prozvonki.phone&hl=en",
+            "https://www.rustore.ru/catalog/app/ru.prozvonki.phone"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://xxxungoodxxx.github.io/prozvonki-site/en/#faq",
+          "mainEntity": [
+            {"@type":"Question","name":"What is ProZvonki?","acceptedAnswer":{"@type":"Answer","text":"ProZvonki is an Android dialer for important calls: a call log with context, comments, tasks, CRM and reports."}},
+            {"@type":"Question","name":"Can I use ProZvonki as a regular dialer?","acceptedAnswer":{"@type":"Answer","text":"Yes. The site covers everyday scenarios: calls, contacts, favorites, speed dial, the call log and protection from unwanted calls."}},
+            {"@type":"Question","name":"How is ProZvonki different from the stock Android dialer?","acceptedAnswer":{"@type":"Answer","text":"Beyond calls and contacts, ProZvonki helps you see important missed calls, leave comments, create tasks, keep CRM cards and build reports."}},
+            {"@type":"Question","name":"Does ProZvonki have a CRM?","acceptedAnswer":{"@type":"Answer","text":"Yes. CRM features include a client card, history, tasks, comments, statuses and separation of personal and work contacts."}},
+            {"@type":"Question","name":"Can I create tasks after calls?","acceptedAnswer":{"@type":"Answer","text":"Yes. In the work scenario a call can become a task or a callback reminder with a due date and a comment."}},
+            {"@type":"Question","name":"Can I leave comments on calls?","acceptedAnswer":{"@type":"Answer","text":"Yes. Comments and importance stay next to the call in the log and on the call card."}},
+            {"@type":"Question","name":"How does ProZvonki help me remember to call back?","acceptedAnswer":{"@type":"Answer","text":"The app surfaces calls that need a response and lets you create a task or a callback reminder."}},
+            {"@type":"Question","name":"Are there call reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. The site describes statistics and XLSX/CSV reports for calls, callbacks, unhandled cases and activity."}},
+            {"@type":"Question","name":"Where are call and CRM data stored?","acceptedAnswer":{"@type":"Answer","text":"The log, tags, blocklist, comments and CRM data are stored on your device. A backup can be saved to a .prozbak file and protected with a password."}},
+            {"@type":"Question","name":"How do the Google Play and RuStore editions differ?","acceptedAnswer":{"@type":"Answer","text":"Core dialer, log, CRM and report features are available in both editions. The RuStore edition additionally includes a beta feature that forwards incoming SMS to email."}},
+            {"@type":"Question","name":"Where can I download the app?","acceptedAnswer":{"@type":"Answer","text":"ProZvonki can be downloaded from Google Play and RuStore using the links on this page."}}
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ProZvonki"><span class="brand-mark"><img src="../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Navigation">
+      <a href="#home-use">For yourself</a>
+      <a href="#workflow">For work</a>
+      <a href="#reports">Reports</a>
+      <a href="#privacy">Privacy</a>
+      <a href="../" hreflang="ru" aria-label="Русская версия">RU</a>
+    </nav>
+    <a class="header-link" href="#download">Download</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Android dialer</p>
+        <h1>Calls that don't slip away</h1>
+        <p class="seo-kicker">Android dialer with CRM, tasks, comments and reports.</p>
+        <p class="hero-lead">ProZvonki replaces your default dialer: it surfaces important missed calls, helps you call back on time, keeps the context of each conversation and builds reports.</p>
+        <div class="store-row" aria-label="Download the app">
+          <a class="store-badge store-badge-google" href="https://play.google.com/store/apps/details?id=ru.prozvonki.phone&amp;hl=en" target="_blank" rel="noopener" aria-label="Get it on Google Play"><img src="../google_play_badge.svg" alt="Get it on Google Play"></a>
+          <a class="store-badge store-badge-rustore" href="https://www.rustore.ru/catalog/app/ru.prozvonki.phone" target="_blank" rel="noopener" aria-label="Download on RuStore"><img src="../rustore_badge.svg" alt="Download on RuStore"></a>
+        </div>
+        <div class="hero-proof" aria-label="Key scenarios">
+          <span>Clear in-call screen</span>
+          <span>Missed calls under control</span>
+          <span>CRM and XLSX reports</span>
+        </div>
+      </div>
+      <div class="screen-carousel hero-carousel" data-carousel aria-label="Key app screens">
+        <div class="carousel-viewport">
+          <figure class="carousel-slide is-active">
+            <img src="../скрины для обычных людей/входящий звонок.webp" alt="Incoming call in ProZvonki">
+            <figcaption><strong>Clear incoming call</strong><span>See at a glance who's calling and what you can do.</span></figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="../скрины для обычных людей/журнал звонков.webp" alt="ProZvonki call log" loading="lazy">
+            <figcaption><strong>Log with context</strong><span>Missed calls, comments, statuses and quick callback.</span></figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="../скрины для бизнес аудитории/задачи в crm.webp" alt="CRM tasks from calls" loading="lazy">
+            <figcaption><strong>Tasks from calls</strong><span>An important call becomes a clear action.</span></figcaption>
+          </figure>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" data-prev aria-label="Previous screen">‹</button>
+          <div class="carousel-dots" data-dots></div>
+          <button type="button" data-next aria-label="Next screen">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="choice-band" aria-label="Two usage scenarios">
+      <a href="android-dialer/" data-aos="fade-up"><span>01</span><strong>Android dialer</strong><p>Answer, call, find contacts and block unwanted numbers faster.</p></a>
+      <a href="call-crm/" data-aos="fade-up" data-aos-delay="120"><span>02</span><strong>Call CRM</strong><p>See who you haven't called back, manage tasks and send reports.</p></a>
+    </section>
+
+    <section id="home-use" class="section">
+      <div class="section-head">
+        <p class="eyebrow">For yourself</p>
+        <h2>Your everyday dialer, only better</h2>
+        <p>No extra complexity: calls, contacts, favorites, speed dial, a call log and protection from unwanted calls.</p>
+        <p class="text-link-row"><a href="android-dialer/">More about the Android dialer</a></p>
+      </div>
+      <div class="split-layout">
+        <div class="text-stack">
+          <article><span>Calls</span><h3>Answer and manage a call without hunting for buttons</h3><p>Active call, second incoming, speaker, Bluetooth and the keypad are always where you expect them.</p></article>
+          <article><span>Contacts</span><h3>Frequent people, closer</h3><p>Favorites, speed dial 1–9 and contact cards help you call faster.</p></article>
+          <article><span>Protection</span><h3>Less spam and fewer accidental calls</h3><p>A blocklist, unknown-number blocking and number rating help you decide whether to answer.</p></article>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="Everyday dialer screens">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="../скрины для обычных людей/активный звонок.webp" alt="Active call" loading="lazy"><figcaption><strong>Active call</strong><span>Key actions during a call within reach.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для обычных людей/диалпад.webp" alt="Dialpad and speed dial" loading="lazy"><figcaption><strong>Dialpad and speed dial</strong><span>Assign frequent contacts to digits.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для обычных людей/рейтинг номера.webp" alt="Number rating" loading="lazy"><figcaption><strong>Number reputation</strong><span>Warnings and categories for unwanted calls.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Previous screen">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Next screen">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="section-head narrow">
+        <p class="eyebrow">Call log</p>
+        <h2>Call context doesn't vanish after you hang up</h2>
+        <p>The log shows repeat calls, comments, tags, importance, statuses and a call card with quick actions.</p>
+        <p class="text-link-row"><a href="client-call-tracking/">How to track client calls</a></p>
+      </div>
+      <div class="split-layout reverse">
+        <div class="journal-points">
+          <div><strong>Find a conversation</strong><span>By number, name, status or tag.</span></div>
+          <div><strong>Save the outcome</strong><span>The comment and importance stay next to the call.</span></div>
+          <div><strong>Act right away</strong><span>Call back, add a contact, block, or open the card.</span></div>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="Log and call card">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="../скрины для обычных людей/журнал звонков.webp" alt="Smart call log" loading="lazy"><figcaption><strong>Smart log</strong><span>Repeat calls and statuses gathered in one place.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для обычных людей/карточка звонка.webp" alt="Call card" loading="lazy"><figcaption><strong>Call card</strong><span>Comment, actions, contact and importance.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Previous screen">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Next screen">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow-section">
+      <div class="section-head">
+        <p class="eyebrow">For work</p>
+        <h2>A missed call becomes a clear task</h2>
+        <p>If you work with clients, what matters isn't a feature list but the chain: spot the missed call, schedule a callback, record the outcome and check the report.</p>
+        <p class="text-link-row"><a href="post-call-tasks/">Post-call tasks and reminders</a></p>
+      </div>
+      <div class="workflow">
+        <article data-aos="fade-up"><span>1</span><h3>Spot it</h3><p>The log shows calls that still need a response.</p></article>
+        <article data-aos="fade-up" data-aos-delay="100"><span>2</span><h3>Schedule</h3><p>Create a task or a callback reminder.</p></article>
+        <article data-aos="fade-up" data-aos-delay="200"><span>3</span><h3>Close</h3><p>Leave a comment and mark the outcome.</p></article>
+        <article data-aos="fade-up" data-aos-delay="300"><span>4</span><h3>Review</h3><p>The report shows where calls are still unhandled.</p></article>
+      </div>
+      <div class="screen-carousel wide-carousel" data-carousel aria-label="Work scenario">
+        <div class="carousel-viewport">
+          <figure class="carousel-slide is-active"><img src="../скрины для бизнес аудитории/задачи в crm.webp" alt="CRM tasks from calls" loading="lazy"><figcaption><strong>Tasks in CRM</strong><span>See which calls need attention.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="../скрины для бизнес аудитории/планирование задачи.webp" alt="Task planning" loading="lazy"><figcaption><strong>Planning</strong><span>Due date, comment and next step.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="../скрины для бизнес аудитории/отчеты по звонкам.webp" alt="Call reports" loading="lazy"><figcaption><strong>Report</strong><span>Check callbacks and problem cases.</span></figcaption></figure>
+        </div>
+        <div class="carousel-controls"><button type="button" data-prev aria-label="Previous screen">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Next screen">›</button></div>
+      </div>
+    </section>
+
+    <section id="crm" class="section">
+      <div class="split-layout">
+        <div>
+          <p class="eyebrow">Mini-CRM</p>
+          <h2>After a call, you know what to do next</h2>
+          <p class="lead-copy">CRM shows up where you need it: in tasks, the client card, comments, history and planning the next contact.</p>
+          <p class="text-link-row"><a href="call-crm/">More about the call CRM</a></p>
+          <ul class="plain-list">
+            <li>Auto-create tasks based on call type.</li>
+            <li>Statuses: needs attention, in progress, scheduled, closed.</li>
+            <li>Personal and work contacts stay separate.</li>
+          </ul>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="CRM screens">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="../скрины для бизнес аудитории/карточка клиента.webp" alt="Client card in CRM" loading="lazy"><figcaption><strong>Client card</strong><span>History, tasks, comments and client details.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для бизнес аудитории/личные и бизнес контакты.webp" alt="Personal and business contacts" loading="lazy"><figcaption><strong>Personal and work</strong><span>CRM doesn't get in the way of personal calls.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Previous screen">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Next screen">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" class="section section-soft">
+      <div class="section-head">
+        <p class="eyebrow">Reports and statistics</p>
+        <h2>See your call results in numbers</h2>
+        <p>Statistics help you understand the load, while XLSX/CSV reports show where calls, callbacks and problems occurred.</p>
+        <p class="text-link-row"><a href="call-reports/">More about call reports</a></p>
+      </div>
+      <div class="split-layout">
+        <div class="text-stack">
+          <article><span>Report</span><h3>For a day, a week or a month</h3><p>A summary, the full call list, unhandled cases, callbacks and a day-by-day breakdown.</p></article>
+          <article><span>Email</span><h3>Scheduled auto-send</h3><p>Send a report manually or set a schedule through your email.</p></article>
+          <article><span>Filters</span><h3>Only the work calls you need</h3><p>SIM, call type, duration and contacts help you analyze the right segment.</p></article>
+        </div>
+        <div class="screen-carousel" data-carousel aria-label="Reports and statistics">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active"><img src="../скрины для бизнес аудитории/статистика звонков.webp" alt="Call statistics" loading="lazy"><figcaption><strong>Statistics</strong><span>Activity and call filters.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для бизнес аудитории/отчеты по звонкам.webp" alt="Excel call reports" loading="lazy"><figcaption><strong>XLSX reports</strong><span>Summary, callbacks and problem calls.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="../скрины для бизнес аудитории/sms визитка.webp" alt="SMS card after a call" loading="lazy"><figcaption><strong>SMS card</strong><span>A short message to the client after a call.</span></figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" data-prev aria-label="Previous screen">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Next screen">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section privacy-section">
+      <div class="section-head">
+        <p class="eyebrow">Privacy</p>
+        <h2>Your data stays under your control</h2>
+        <p>The app handles sensitive things: calls, contacts, the log, SMS and work notes. That's why clear boundaries matter.</p>
+      </div>
+      <div class="privacy-grid">
+        <article><h3>Local data</h3><p>The log, tags, blocklist, comments and CRM data are stored on your device.</p></article>
+        <article><h3>Protected backup</h3><p>A backup can be saved to a `.prozbak` file and protected with a password.</p></article>
+        <article><h3>Different editions</h3><p>SMS-to-email forwarding is available only in the RuStore edition and is enabled manually.</p></article>
+      </div>
+      <p class="text-link-row"><a href="../privacy-en/">Full privacy policy</a></p>
+    </section>
+
+    <section class="section store-section">
+      <div class="store-compare">
+        <div><p class="eyebrow">App editions</p><h2>Google Play or RuStore</h2><p>Core dialer, log, CRM and report features are available in both editions. The RuStore edition additionally includes a beta feature that forwards incoming SMS to email.</p></div>
+        <div class="compare-list" aria-label="Edition comparison">
+          <div><span>Dialer, log, contacts</span><strong>Both editions</strong></div>
+          <div><span>CRM, statistics, reports</span><strong>Both editions</strong></div>
+          <div><span>SMS to email</span><strong>RuStore, beta</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section seo-links-section">
+      <div class="section-head">
+        <p class="eyebrow">Use cases</p>
+        <h2>What you can do in ProZvonki</h2>
+        <p>ProZvonki is for people who need more than a plain Android dialer — clear client-call tracking: comments, tasks, callback reminders, CRM cards and reports.</p>
+      </div>
+      <div class="seo-link-grid">
+        <a href="android-dialer/" data-aos="fade-up"><strong>Android dialer</strong><span>Convenient calls, contacts, log, speed dial and protection from unwanted calls.</span></a>
+        <a href="call-crm/" data-aos="fade-up" data-aos-delay="80"><strong>Call CRM</strong><span>Client cards, conversation history, comments and next actions right next to your calls.</span></a>
+        <a href="client-call-tracking/" data-aos="fade-up" data-aos-delay="160"><strong>Client call tracking</strong><span>Control over missed calls, statuses, tags, conversation outcomes and unhandled cases.</span></a>
+        <a href="post-call-tasks/" data-aos="fade-up" data-aos-delay="240"><strong>Post-call tasks</strong><span>Due dates, callback reminders, comments and task statuses.</span></a>
+        <a href="call-reports/" data-aos="fade-up" data-aos-delay="320"><strong>Call reports</strong><span>Statistics, XLSX/CSV reports, callbacks and filters for work calls.</span></a>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>What is ProZvonki?</summary><p>ProZvonki is an Android dialer for important calls: a call log with context, comments, tasks, CRM and reports.</p></details>
+        <details><summary>Can I use ProZvonki as a regular dialer?</summary><p>Yes. The site covers everyday scenarios: calls, contacts, favorites, speed dial, the call log and protection from unwanted calls.</p></details>
+        <details><summary>How is ProZvonki different from the stock Android dialer?</summary><p>Beyond calls and contacts, ProZvonki helps you see important missed calls, leave comments, create tasks, keep CRM cards and build reports.</p></details>
+        <details><summary>Does ProZvonki have a CRM?</summary><p>Yes. CRM features include a client card, history, tasks, comments, statuses and separation of personal and work contacts.</p></details>
+        <details><summary>Can I create tasks after calls?</summary><p>Yes. In the work scenario a call can become a task or a callback reminder with a due date and a comment.</p></details>
+        <details><summary>Can I leave comments on calls?</summary><p>Yes. Comments and importance stay next to the call in the log and on the call card.</p></details>
+        <details><summary>How does ProZvonki help me remember to call back?</summary><p>The app surfaces calls that need a response and lets you create a task or a callback reminder.</p></details>
+        <details><summary>Are there call reports?</summary><p>Yes. The site describes statistics and XLSX/CSV reports for calls, callbacks, unhandled cases and activity.</p></details>
+        <details><summary>Where are call and CRM data stored?</summary><p>The log, tags, blocklist, comments and CRM data are stored on your device. A backup can be saved to a `.prozbak` file and protected with a password.</p></details>
+        <details><summary>How do the Google Play and RuStore editions differ?</summary><p>Core dialer, log, CRM and report features are available in both editions. The RuStore edition additionally includes a beta feature that forwards incoming SMS to email.</p></details>
+        <details><summary>Where can I download the app?</summary><p>ProZvonki can be downloaded from Google Play and RuStore using the links on this page.</p></details>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div><p class="eyebrow">Download</p><h2>Try ProZvonki on your phone</h2><p>Choose a store. After installation, the app will ask for permissions for calls, contacts, notifications and the features you turn on.</p></div>
+      <div class="store-row">
+        <a class="store-badge store-badge-google" href="https://play.google.com/store/apps/details?id=ru.prozvonki.phone&amp;hl=en" target="_blank" rel="noopener" aria-label="Get it on Google Play"><img src="../google_play_badge.svg" alt="Get it on Google Play"></a>
+        <a class="store-badge store-badge-rustore" href="https://www.rustore.ru/catalog/app/ru.prozvonki.phone" target="_blank" rel="noopener" aria-label="Download on RuStore"><img src="../rustore_badge.svg" alt="Download on RuStore"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><strong>ProZvonki</strong><span>Android dialer for calls you can't afford to lose. · <a href="../privacy-en/">Privacy Policy</a></span></footer>
+
+  <script>
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+      const dotsHost = carousel.querySelector('[data-dots]');
+      const prev = carousel.querySelector('[data-prev]');
+      const next = carousel.querySelector('[data-next]');
+      let index = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+      let timer = null;
+
+      const dots = slides.map((_, dotIndex) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Show screen ${dotIndex + 1}`);
+        button.addEventListener('click', () => {
+          show(dotIndex);
+          restart();
+        });
+        dotsHost.appendChild(button);
+        return button;
+      });
+
+      function show(nextIndex) {
+        index = (nextIndex + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === index));
+        dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+      }
+
+      function restart() {
+        window.clearInterval(timer);
+        timer = window.setInterval(() => show(index + 1), 5200);
+      }
+
+      prev.addEventListener('click', () => {
+        show(index - 1);
+        restart();
+      });
+      next.addEventListener('click', () => {
+        show(index + 1);
+        restart();
+      });
+      carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+      carousel.addEventListener('mouseleave', restart);
+      carousel.addEventListener('focusin', () => window.clearInterval(timer));
+      carousel.addEventListener('focusout', restart);
+      show(index);
+      restart();
+    });
+  </script>
+
+  <!-- Animation libraries (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('.section-head, .text-stack > article, .journal-points > div, .compare-list > div, .faq-list > details')
+      .forEach((el, i) => {
+        if (!el.hasAttribute('data-aos')) {
+          el.setAttribute('data-aos', 'fade-up');
+          el.setAttribute('data-aos-delay', String((i % 4) * 90));
+        }
+      });
+
+    if (!reduceMotion && window.AOS) {
+      AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
+    }
+
+    if (!reduceMotion && window.gsap) {
+      const heroBits = [
+        '.hero-copy .eyebrow', '.hero-copy h1', '.hero-copy .seo-kicker',
+        '.hero-copy .hero-lead', '.hero-copy .store-row', '.hero-copy .hero-proof'
+      ].filter((sel) => document.querySelector(sel));
+
+      gsap.from(heroBits, {
+        y: 26, opacity: 0, duration: 0.8, ease: 'power3.out', stagger: 0.1
+      });
+      gsap.from('.hero-carousel', {
+        y: 40, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.2
+      });
+    }
+  </script>
+</body>
+</html>

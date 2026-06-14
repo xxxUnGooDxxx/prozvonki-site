@@ -1,33 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/zvonilka-android/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/zvonilka-android/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/android-dialer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/zvonilka-android/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/android-dialer/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/zvonilka-android/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/android-dialer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/zvonilka-android/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/crm-dlya-zvonkov/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/crm-dlya-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/call-crm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/crm-dlya-zvonkov/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/call-crm/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/crm-dlya-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/call-crm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/crm-dlya-zvonkov/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/uchet-zvonkov-klientov/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/uchet-zvonkov-klientov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/client-call-tracking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/uchet-zvonkov-klientov/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/client-call-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/uchet-zvonkov-klientov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/client-call-tracking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/uchet-zvonkov-klientov/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/zadachi-posle-zvonka/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/zadachi-posle-zvonka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/post-call-tasks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/zadachi-posle-zvonka/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/post-call-tasks/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/zadachi-posle-zvonka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/post-call-tasks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/zadachi-posle-zvonka/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/otchety-po-zvonkam/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/otchety-po-zvonkam/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/call-reports/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/otchety-po-zvonkam/"/>
+  </url>
+  <url>
+    <loc>https://xxxungoodxxx.github.io/prozvonki-site/en/call-reports/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/otchety-po-zvonkam/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/en/call-reports/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/otchety-po-zvonkam/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/privacy-en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/privacy/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/data-deletion/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion/"/>
   </url>
   <url>
     <loc>https://xxxungoodxxx.github.io/prozvonki-site/data-deletion-en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xxxungoodxxx.github.io/prozvonki-site/data-deletion/"/>
   </url>
 </urlset>
