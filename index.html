@@ -19,6 +19,10 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="ProZvonki%20200%20na%20200.png">
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS (Animate On Scroll) — появление элементов при прокрутке -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Доп. анимации этой версии (v2) -->
+  <link rel="stylesheet" href="animations.css">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -114,15 +118,15 @@
       <div class="screen-carousel hero-carousel" data-carousel aria-label="Главные экраны приложения">
         <div class="carousel-viewport">
           <figure class="carousel-slide is-active">
-            <img src="скрины для обычных людей/входящий звонок.png" alt="Входящий звонок в ProZvonki">
+            <img src="скрины для обычных людей/входящий звонок.webp" alt="Входящий звонок в ProZvonki">
             <figcaption><strong>Понятный входящий</strong><span>Сразу видно, кто звонит и какие действия доступны.</span></figcaption>
           </figure>
           <figure class="carousel-slide">
-            <img src="скрины для обычных людей/журнал звонков.png" alt="Журнал звонков ProZvonki" loading="lazy">
+            <img src="скрины для обычных людей/журнал звонков.webp" alt="Журнал звонков ProZvonki" loading="lazy">
             <figcaption><strong>Журнал с контекстом</strong><span>Пропущенные, комментарии, статусы и быстрый перезвон.</span></figcaption>
           </figure>
           <figure class="carousel-slide">
-            <img src="скрины для бизнес аудитории/задачи в crm.png" alt="CRM-задачи из звонков" loading="lazy">
+            <img src="скрины для бизнес аудитории/задачи в crm.webp" alt="CRM-задачи из звонков" loading="lazy">
             <figcaption><strong>Задачи из звонков</strong><span>Важный звонок превращается в понятное действие.</span></figcaption>
           </figure>
         </div>
@@ -135,8 +139,8 @@
     </section>
 
     <section class="choice-band" aria-label="Два сценария использования">
-      <a href="zvonilka-android/"><span>01</span><strong>Звонилка для Android</strong><p>Быстрее отвечать, звонить, находить контакты и блокировать лишние номера.</p></a>
-      <a href="crm-dlya-zvonkov/"><span>02</span><strong>CRM для звонков</strong><p>Понимать, кому не перезвонили, вести задачи и отправлять отчеты.</p></a>
+      <a href="zvonilka-android/" data-aos="fade-up"><span>01</span><strong>Звонилка для Android</strong><p>Быстрее отвечать, звонить, находить контакты и блокировать лишние номера.</p></a>
+      <a href="crm-dlya-zvonkov/" data-aos="fade-up" data-aos-delay="120"><span>02</span><strong>CRM для звонков</strong><p>Понимать, кому не перезвонили, вести задачи и отправлять отчеты.</p></a>
     </section>
 
     <section id="home-use" class="section">
@@ -154,9 +158,9 @@
         </div>
         <div class="screen-carousel" data-carousel aria-label="Экраны обычной звонилки">
           <div class="carousel-viewport">
-            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/активный звонок.png" alt="Активный звонок" loading="lazy"><figcaption><strong>Активный звонок</strong><span>Основные действия во время разговора под рукой.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для обычных людей/диалпад.png" alt="Диалпад и быстрый набор" loading="lazy"><figcaption><strong>Диалпад и быстрый набор</strong><span>Назначайте частые контакты на цифры.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для обычных людей/рейтинг номера.png" alt="Рейтинг номера" loading="lazy"><figcaption><strong>Репутация номера</strong><span>Предупреждения и категории нежелательных звонков.</span></figcaption></figure>
+            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/активный звонок.webp" alt="Активный звонок" loading="lazy"><figcaption><strong>Активный звонок</strong><span>Основные действия во время разговора под рукой.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/диалпад.webp" alt="Диалпад и быстрый набор" loading="lazy"><figcaption><strong>Диалпад и быстрый набор</strong><span>Назначайте частые контакты на цифры.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/рейтинг номера.webp" alt="Рейтинг номера" loading="lazy"><figcaption><strong>Репутация номера</strong><span>Предупреждения и категории нежелательных звонков.</span></figcaption></figure>
           </div>
           <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
         </div>
@@ -178,8 +182,8 @@
         </div>
         <div class="screen-carousel" data-carousel aria-label="Журнал и карточка звонка">
           <div class="carousel-viewport">
-            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/журнал звонков.png" alt="Умный журнал звонков" loading="lazy"><figcaption><strong>Умный журнал</strong><span>Повторные вызовы и статусы собраны в одном месте.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для обычных людей/карточка звонка.png" alt="Карточка звонка" loading="lazy"><figcaption><strong>Карточка звонка</strong><span>Комментарий, действия, контакт и важность.</span></figcaption></figure>
+            <figure class="carousel-slide is-active"><img src="скрины для обычных людей/журнал звонков.webp" alt="Умный журнал звонков" loading="lazy"><figcaption><strong>Умный журнал</strong><span>Повторные вызовы и статусы собраны в одном месте.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для обычных людей/карточка звонка.webp" alt="Карточка звонка" loading="lazy"><figcaption><strong>Карточка звонка</strong><span>Комментарий, действия, контакт и важность.</span></figcaption></figure>
           </div>
           <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
         </div>
@@ -194,16 +198,16 @@
         <p class="text-link-row"><a href="zadachi-posle-zvonka/">Задачи после звонка и напоминания</a></p>
       </div>
       <div class="workflow">
-        <article><span>1</span><h3>Увидеть</h3><p>Журнал показывает звонки, которые еще требуют реакции.</p></article>
-        <article><span>2</span><h3>Запланировать</h3><p>Создайте задачу или напоминание о перезвоне.</p></article>
-        <article><span>3</span><h3>Закрыть</h3><p>Оставьте комментарий и отметьте результат общения.</p></article>
-        <article><span>4</span><h3>Проверить</h3><p>Отчет покажет, где остались необработанные звонки.</p></article>
+        <article data-aos="fade-up"><span>1</span><h3>Увидеть</h3><p>Журнал показывает звонки, которые еще требуют реакции.</p></article>
+        <article data-aos="fade-up" data-aos-delay="100"><span>2</span><h3>Запланировать</h3><p>Создайте задачу или напоминание о перезвоне.</p></article>
+        <article data-aos="fade-up" data-aos-delay="200"><span>3</span><h3>Закрыть</h3><p>Оставьте комментарий и отметьте результат общения.</p></article>
+        <article data-aos="fade-up" data-aos-delay="300"><span>4</span><h3>Проверить</h3><p>Отчет покажет, где остались необработанные звонки.</p></article>
       </div>
       <div class="screen-carousel wide-carousel" data-carousel aria-label="Рабочий сценарий">
         <div class="carousel-viewport">
-          <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/задачи в crm.png" alt="CRM-задачи из звонков" loading="lazy"><figcaption><strong>Задачи в CRM</strong><span>Видно, какие звонки требуют внимания.</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/планирование задачи.png" alt="Планирование задачи" loading="lazy"><figcaption><strong>Планирование</strong><span>Срок, комментарий и следующий шаг.</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.png" alt="Отчеты по звонкам" loading="lazy"><figcaption><strong>Отчет</strong><span>Проверка перезвонов и проблемных обращений.</span></figcaption></figure>
+          <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/задачи в crm.webp" alt="CRM-задачи из звонков" loading="lazy"><figcaption><strong>Задачи в CRM</strong><span>Видно, какие звонки требуют внимания.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/планирование задачи.webp" alt="Планирование задачи" loading="lazy"><figcaption><strong>Планирование</strong><span>Срок, комментарий и следующий шаг.</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.webp" alt="Отчеты по звонкам" loading="lazy"><figcaption><strong>Отчет</strong><span>Проверка перезвонов и проблемных обращений.</span></figcaption></figure>
         </div>
         <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
       </div>
@@ -224,8 +228,8 @@
         </div>
         <div class="screen-carousel" data-carousel aria-label="CRM-экраны">
           <div class="carousel-viewport">
-            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/карточка клиента.png" alt="Карточка клиента в CRM" loading="lazy"><figcaption><strong>Карточка клиента</strong><span>История, задачи, комментарии и данные клиента.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/личные и бизнес контакты.png" alt="Личные и бизнес контакты" loading="lazy"><figcaption><strong>Личное и рабочее</strong><span>CRM не мешает обычным личным звонкам.</span></figcaption></figure>
+            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/карточка клиента.webp" alt="Карточка клиента в CRM" loading="lazy"><figcaption><strong>Карточка клиента</strong><span>История, задачи, комментарии и данные клиента.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/личные и бизнес контакты.webp" alt="Личные и бизнес контакты" loading="lazy"><figcaption><strong>Личное и рабочее</strong><span>CRM не мешает обычным личным звонкам.</span></figcaption></figure>
           </div>
           <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
         </div>
@@ -247,9 +251,9 @@
         </div>
         <div class="screen-carousel" data-carousel aria-label="Отчеты и статистика">
           <div class="carousel-viewport">
-            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/статистика звонков.png" alt="Статистика звонков" loading="lazy"><figcaption><strong>Статистика</strong><span>Активность и фильтры по звонкам.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.png" alt="Excel-отчеты по звонкам" loading="lazy"><figcaption><strong>XLSX-отчеты</strong><span>Сводка, перезвоны и проблемные звонки.</span></figcaption></figure>
-            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/sms визитка.png" alt="SMS-визитка после звонка" loading="lazy"><figcaption><strong>SMS-визитка</strong><span>Короткое сообщение клиенту после звонка.</span></figcaption></figure>
+            <figure class="carousel-slide is-active"><img src="скрины для бизнес аудитории/статистика звонков.webp" alt="Статистика звонков" loading="lazy"><figcaption><strong>Статистика</strong><span>Активность и фильтры по звонкам.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/отчеты по звонкам.webp" alt="Excel-отчеты по звонкам" loading="lazy"><figcaption><strong>XLSX-отчеты</strong><span>Сводка, перезвоны и проблемные звонки.</span></figcaption></figure>
+            <figure class="carousel-slide"><img src="скрины для бизнес аудитории/sms визитка.webp" alt="SMS-визитка после звонка" loading="lazy"><figcaption><strong>SMS-визитка</strong><span>Короткое сообщение клиенту после звонка.</span></figcaption></figure>
           </div>
           <div class="carousel-controls"><button type="button" data-prev aria-label="Предыдущий экран">‹</button><div class="carousel-dots" data-dots></div><button type="button" data-next aria-label="Следующий экран">›</button></div>
         </div>
@@ -263,9 +267,9 @@
         <p>Приложение работает с чувствительными вещами: звонками, контактами, журналом, SMS и рабочими заметками. Поэтому важны понятные границы.</p>
       </div>
       <div class="privacy-grid">
-        <article><h3>Локальные данные</h3><p>Журнал, теги, черный список, комментарии и CRM-данные хранятся на устройстве.</p></article>
-        <article><h3>Защищенный бэкап</h3><p>Резервную копию можно сохранить в файл `.prozbak` и защитить паролем.</p></article>
-        <article><h3>Разные версии</h3><p>Пересылка SMS на email доступна только в RuStore-версии и включается вручную.</p></article>
+        <article data-aos="zoom-in"><h3>Локальные данные</h3><p>Журнал, теги, черный список, комментарии и CRM-данные хранятся на устройстве.</p></article>
+        <article data-aos="zoom-in" data-aos-delay="120"><h3>Защищенный бэкап</h3><p>Резервную копию можно сохранить в файл `.prozbak` и защитить паролем.</p></article>
+        <article data-aos="zoom-in" data-aos-delay="240"><h3>Разные версии</h3><p>Пересылка SMS на email доступна только в RuStore-версии и включается вручную.</p></article>
       </div>
       <p class="text-link-row"><a href="privacy/">Полная политика конфиденциальности</a></p>
     </section>
@@ -288,11 +292,11 @@
         <p>ProZvonki подходит тем, кому нужна не только обычная звонилка Android, но и понятный учет звонков клиентов: комментарии, задачи, напоминания о перезвоне, CRM-карточки и отчеты.</p>
       </div>
       <div class="seo-link-grid">
-        <a href="zvonilka-android/"><strong>Звонилка для Android</strong><span>Удобные звонки, контакты, журнал, быстрый набор и защита от нежелательных вызовов.</span></a>
-        <a href="crm-dlya-zvonkov/"><strong>CRM для звонков</strong><span>Карточки клиента, история общения, комментарии и следующие действия рядом со звонками.</span></a>
-        <a href="uchet-zvonkov-klientov/"><strong>Учет звонков клиентов</strong><span>Контроль пропущенных, статусов, тегов, результатов разговора и необработанных обращений.</span></a>
-        <a href="zadachi-posle-zvonka/"><strong>Задачи после звонка</strong><span>Сроки, напоминания о перезвоне, комментарии и статусы задач.</span></a>
-        <a href="otchety-po-zvonkam/"><strong>Отчеты по звонкам</strong><span>Статистика, XLSX/CSV-отчеты, перезвоны и фильтры по рабочим звонкам.</span></a>
+        <a href="zvonilka-android/" data-aos="fade-up"><strong>Звонилка для Android</strong><span>Удобные звонки, контакты, журнал, быстрый набор и защита от нежелательных вызовов.</span></a>
+        <a href="crm-dlya-zvonkov/" data-aos="fade-up" data-aos-delay="80"><strong>CRM для звонков</strong><span>Карточки клиента, история общения, комментарии и следующие действия рядом со звонками.</span></a>
+        <a href="uchet-zvonkov-klientov/" data-aos="fade-up" data-aos-delay="160"><strong>Учет звонков клиентов</strong><span>Контроль пропущенных, статусов, тегов, результатов разговора и необработанных обращений.</span></a>
+        <a href="zadachi-posle-zvonka/" data-aos="fade-up" data-aos-delay="240"><strong>Задачи после звонка</strong><span>Сроки, напоминания о перезвоне, комментарии и статусы задач.</span></a>
+        <a href="otchety-po-zvonkam/" data-aos="fade-up" data-aos-delay="320"><strong>Отчеты по звонкам</strong><span>Статистика, XLSX/CSV-отчеты, перезвоны и фильтры по рабочим звонкам.</span></a>
       </div>
     </section>
 
@@ -374,6 +378,45 @@
       show(index);
       restart();
     });
+  </script>
+
+  <!-- ===== v2: библиотеки красивых анимаций (через CDN) ===== -->
+  <!-- AOS: появление при прокрутке -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- GSAP: продвинутые анимации (вход героя) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <script>
+    // Уважаем системную настройку «уменьшить движение»
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // 1) AOS — авто-разметка секций, чтобы не писать data-aos на каждом блоке вручную
+    document.querySelectorAll('.section-head, .text-stack > article, .journal-points > div, .compare-list > div, .faq-list > details')
+      .forEach((el, i) => {
+        if (!el.hasAttribute('data-aos')) {
+          el.setAttribute('data-aos', 'fade-up');
+          el.setAttribute('data-aos-delay', String((i % 4) * 90));
+        }
+      });
+
+    if (!reduceMotion && window.AOS) {
+      AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
+    }
+
+    // 2) GSAP — эффектный «вход» героя при загрузке страницы
+    if (!reduceMotion && window.gsap) {
+      const heroBits = [
+        '.hero-copy .eyebrow', '.hero-copy h1', '.hero-copy .seo-kicker',
+        '.hero-copy .hero-lead', '.hero-copy .store-row', '.hero-copy .hero-proof'
+      ].filter((sel) => document.querySelector(sel));
+
+      gsap.from(heroBits, {
+        y: 26, opacity: 0, duration: 0.8, ease: 'power3.out', stagger: 0.1
+      });
+      gsap.from('.hero-carousel', {
+        y: 40, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.2
+      });
+    }
   </script>
 </body>
 </html>

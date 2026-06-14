@@ -1,0 +1,63 @@
+/* ============================================================
+   v2 — дополнительные анимации поверх основного styles.css
+   Фирменная зелёно-мятная гамма ProZvonki.
+   Все эффекты отключаются при системной настройке
+   «уменьшить движение» (prefers-reduced-motion).
+   ============================================================ */
+
+/* Плавное «поднятие» интерактивных карточек при наведении */
+@media (prefers-reduced-motion: no-preference) {
+  .choice-band a,
+  .seo-link-grid a,
+  .privacy-grid article,
+  .compare-list > div {
+    transition: transform .25s ease, box-shadow .25s ease;
+    will-change: transform;
+  }
+
+  .choice-band a:hover,
+  .seo-link-grid a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 48px rgba(16, 92, 56, 0.16);
+  }
+
+  .privacy-grid article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(16, 92, 56, 0.12);
+  }
+
+  /* Лёгкое «дыхание» кнопок магазинов — мягкий акцент, не назойливо */
+  .hero .store-badge {
+    animation: prozvonki-float 5.5s ease-in-out infinite;
+  }
+  .hero .store-badge:nth-child(2) { animation-delay: .8s; }
+
+  @keyframes prozvonki-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-5px); }
+  }
+
+  /* Пульсация акцентной кнопки «Скачать» в шапке */
+  .header-link {
+    position: relative;
+  }
+  .header-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(21, 152, 93, .45);
+    animation: prozvonki-pulse 2.6s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes prozvonki-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(21, 152, 93, .40); }
+    70%  { box-shadow: 0 0 0 14px rgba(21, 152, 93, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(21, 152, 93, 0); }
+  }
+}
+
+/* Полностью убираем движение для тех, кто его отключил в системе */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; }
+}
