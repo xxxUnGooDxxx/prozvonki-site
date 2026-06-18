@@ -31,6 +31,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/opredelitel-nomera/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/blokirovka-spam-zvonkov/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/blokirovka-spam-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/block-spam-calls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/blokirovka-spam-zvonkov/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/block-spam-calls/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/blokirovka-spam-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/block-spam-calls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/blokirovka-spam-zvonkov/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/crm-dlya-zvonkov/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/crm-dlya-zvonkov/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-crm/"/>
