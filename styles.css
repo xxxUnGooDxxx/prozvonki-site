@@ -402,3 +402,56 @@ p { margin: 0; }
   h2 { font-size: 28px; }
   h3 { font-size: 18px; }
 }
+
+/* Theme toggle button */
+.theme-toggle { width: 42px; height: 42px; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; transition: color .18s ease, border-color .18s ease; }
+.theme-toggle:hover { color: var(--green-dark); border-color: var(--green); }
+.theme-toggle svg { width: 20px; height: 20px; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Sitewide internal links */
+.site-links { padding: 30px clamp(20px, 5vw, 72px); border-top: 1px solid var(--line); background: var(--mint); }
+.site-links-inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; max-width: 1120px; }
+.site-links-title { font-weight: 900; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--green-dark); margin-right: 6px; }
+.site-links a { color: var(--muted); font-size: 14px; font-weight: 750; }
+.site-links a:hover { color: var(--green-dark); }
+
+/* Dark theme */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --green: #1fb574;
+  --green-dark: #7fe0b0;
+  --mint: #121815;
+  --ink: #e9f1ec;
+  --text: #c4d2ca;
+  --muted: #93a69c;
+  --line: #283230;
+  --white: #171d1a;
+  --pale: #1c2320;
+  --shadow: 0 26px 70px rgba(0,0,0,.55);
+}
+html[data-theme="dark"] body { background: #0f1411; }
+html[data-theme="dark"] .site-header { background: rgba(15,20,17,.92); border-bottom-color: rgba(40,50,46,.9); }
+html[data-theme="dark"] .hero { background: radial-gradient(circle at 86% 46%, rgba(31,181,116,.10), transparent 34%), linear-gradient(180deg, #0f1411 0%, #131a16 100%); }
+html[data-theme="dark"] .seo-page-hero { background: radial-gradient(circle at 88% 28%, rgba(31,181,116,.10), transparent 34%), linear-gradient(180deg, #0f1411 0%, #131a16 100%); }
+html[data-theme="dark"] .hero-proof span { background: rgba(255,255,255,.05); }
+html[data-theme="dark"] .carousel-viewport { background: rgba(255,255,255,.04); border-color: rgba(40,50,46,.9); }
+html[data-theme="dark"] .carousel-controls button { background: var(--white); }
+html[data-theme="dark"] .carousel-dots button { background: #2c3a33; }
+html[data-theme="dark"] .choice-band a { background: var(--white); }
+html[data-theme="dark"] .workflow article { background: var(--white); }
+html[data-theme="dark"] .seo-links-section { background: var(--white); }
+html[data-theme="dark"] .faq-list details { background: var(--white); }
+html[data-theme="dark"] .compare-list { background: var(--white); }
+html[data-theme="dark"] .side-card { background: var(--white); }
+html[data-theme="dark"] .related-links a { background: var(--white); }
+html[data-theme="dark"] .download-section,
+html[data-theme="dark"] .page-cta { background: #0b0f0d; }
+html[data-theme="dark"] .item-icon { background: rgba(31,181,116,.16); }
+html[data-theme="dark"] .plain-list li::before { box-shadow: 0 0 0 5px rgba(31,181,116,.16); }
+html[data-theme="dark"] .text-link-row a { border-bottom-color: rgba(127,224,176,.35); }
+html[data-theme="dark"] .page-note { background: #241c12; color: var(--muted); }
+html[data-theme="dark"] .page-note strong { color: #e0a060; }
