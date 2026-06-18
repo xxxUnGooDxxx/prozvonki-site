@@ -43,6 +43,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/blokirovka-spam-zvonkov/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/zhurnal-zvonkov/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zhurnal-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-log/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zhurnal-zvonkov/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/call-log/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zhurnal-zvonkov/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-log/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zhurnal-zvonkov/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/crm-dlya-zvonkov/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/crm-dlya-zvonkov/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-crm/"/>
@@ -89,6 +101,18 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/otchety-po-zvonkam/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-reports/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/otchety-po-zvonkam/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/obo-mne/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/obo-mne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/about-you/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/obo-mne/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/about-you/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/obo-mne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/about-you/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/obo-mne/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/privacy/</loc>
