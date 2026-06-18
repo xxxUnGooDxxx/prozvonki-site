@@ -403,14 +403,20 @@ p { margin: 0; }
   h3 { font-size: 18px; }
 }
 
-/* Theme toggle button */
-.theme-toggle { width: 42px; height: 42px; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; transition: color .18s ease, border-color .18s ease; }
-.theme-toggle:hover { color: var(--green-dark); border-color: var(--green); }
-.theme-toggle svg { width: 20px; height: 20px; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+/* Theme switch */
+.theme-switch { flex: 0 0 auto; display: inline-flex; align-items: center; padding: 0; border: 0; background: none; cursor: pointer; }
+.theme-switch-track { position: relative; width: 54px; height: 28px; border-radius: 999px; background: #e3ede7; border: 1px solid var(--line); transition: background .22s ease, border-color .22s ease; }
+.theme-switch-ico { position: absolute; top: 50%; width: 14px; height: 14px; transform: translateY(-50%); pointer-events: none; transition: color .22s ease, opacity .22s ease; }
+.theme-switch-ico.ico-sun { left: 7px; color: #d8951f; }
+.theme-switch-ico.ico-moon { right: 7px; color: #8aa0e8; opacity: .55; }
+.theme-switch-knob { position: absolute; top: 2px; left: 2px; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(16,40,28,.28); transition: transform .22s ease; }
+.theme-switch:hover .theme-switch-track { border-color: var(--green); }
+.theme-switch:focus-visible { outline: none; }
+.theme-switch:focus-visible .theme-switch-track { box-shadow: 0 0 0 3px rgba(21,152,93,.35); }
+html[data-theme="dark"] .theme-switch-track { background: #243a30; }
+html[data-theme="dark"] .theme-switch-knob { transform: translateX(26px); background: #0f1411; }
+html[data-theme="dark"] .theme-switch-ico.ico-sun { opacity: .5; }
+html[data-theme="dark"] .theme-switch-ico.ico-moon { opacity: 1; color: #cdd8ff; }
 
 /* Sitewide internal links */
 .site-links { padding: 30px clamp(20px, 5vw, 72px); border-top: 1px solid var(--line); background: var(--mint); }
