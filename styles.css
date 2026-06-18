@@ -208,6 +208,9 @@ p { margin: 0; }
 .faq-list summary { cursor: pointer; padding: 18px 20px; font-weight: 850; }
 .faq-list details[open] summary { color: var(--green-dark); }
 .faq-list p { padding: 0 20px 18px; color: var(--muted); }
+.faq-list .faq-steps { margin: 0; padding: 0 20px 18px 42px; color: var(--muted); display: grid; gap: 10px; }
+.faq-list .faq-steps li { line-height: 1.55; padding-left: 4px; }
+.faq-list .faq-steps strong { color: var(--green-dark); }
 .store-compare { display: grid; grid-template-columns: minmax(0,.9fr) minmax(320px,.7fr); align-items: start; gap: clamp(32px, 6vw, 80px); }
 .compare-list { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 .compare-list div { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 18px; padding: 20px; border-top: 1px solid var(--line); }
