@@ -127,6 +127,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/obo-mne/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/ekran-vhodyashchego-zvonka/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/ekran-vhodyashchego-zvonka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/incoming-call-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/ekran-vhodyashchego-zvonka/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/incoming-call-screen/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/ekran-vhodyashchego-zvonka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/incoming-call-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/ekran-vhodyashchego-zvonka/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/zvonilka-dlya-dvuh-sim/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zvonilka-dlya-dvuh-sim/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/dual-sim-dialer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zvonilka-dlya-dvuh-sim/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/dual-sim-dialer/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zvonilka-dlya-dvuh-sim/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/dual-sim-dialer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zvonilka-dlya-dvuh-sim/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/sms-vizitka/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/sms-vizitka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/sms-business-card/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/sms-vizitka/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/sms-business-card/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/sms-vizitka/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/sms-business-card/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/sms-vizitka/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/temy-oformleniya/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/temy-oformleniya/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/themes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/temy-oformleniya/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/themes/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/temy-oformleniya/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/themes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/temy-oformleniya/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/peresylka-sms-na-pochtu/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/peresylka-sms-na-pochtu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/sms-to-email/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/peresylka-sms-na-pochtu/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/sms-to-email/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/peresylka-sms-na-pochtu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/sms-to-email/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/peresylka-sms-na-pochtu/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/privacy-en/"/>
