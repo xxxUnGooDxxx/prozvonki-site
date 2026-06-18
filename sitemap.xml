@@ -103,6 +103,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/otchety-po-zvonkam/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/golosovoy-nabor/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/golosovoy-nabor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/voice-dialing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/golosovoy-nabor/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/voice-dialing/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/golosovoy-nabor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/voice-dialing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/golosovoy-nabor/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/obo-mne/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/obo-mne/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/about-you/"/>
