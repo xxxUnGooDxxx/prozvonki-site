@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интеграция с Билайн ОАТС — статусы звонков, переадресация — ProZvonki</title>
+  <meta name="description" content="Интеграция Android-звонилки ProZvonki с облачной АТС Билайн (ОАТС): синхронизация статусов звонков, безусловная, условная и переадресация по расписанию. Подключение по API-токену.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pro-zvonki.ru/integraciya-beeline-oats/">
+  <link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-beeline-oats/">
+  <link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-beeline-oats/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pro-zvonki.ru/integraciya-beeline-oats/">
+  <meta property="og:title" content="Интеграция с Билайн ОАТС — статусы звонков и переадресация — ProZvonki">
+  <meta property="og:description" content="Синхронизация статусов звонков и управление переадресацией облачной АТС Билайн прямо из Android-звонилки. Подключение по API-токену.">
+  <meta property="og:image" content="https://pro-zvonki.ru/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Интеграция с Билайн ОАТС — ProZvonki">
+  <meta name="twitter:description" content="Статусы звонков и переадресация облачной АТС Билайн в Android-звонилке.">
+  <meta name="twitter:image" content="https://pro-zvonki.ru/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895','ym');ym(109706895,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProZvonki","item":"https://pro-zvonki.ru/"},{"@type":"ListItem","position":2,"name":"Интеграция с Билайн ОАТС","item":"https://pro-zvonki.ru/integraciya-beeline-oats/"}]},{"@type":"FAQPage","@id":"https://pro-zvonki.ru/integraciya-beeline-oats/#faq","mainEntity":[{"@type":"Question","name":"Что даёт интеграция с Билайн ОАТС?","acceptedAnswer":{"@type":"Answer","text":"Приложение подтягивает из облачной АТС Билайн статусы звонков и позволяет управлять переадресацией — безусловной, условной и по расписанию — прямо из звонилки."}},{"@type":"Question","name":"Как подключается интеграция?","acceptedAnswer":{"@type":"Answer","text":"По API-токену облачной АТС Билайн. В приложении вы указываете токен и свой номер в ОАТС, после чего доступны синхронизация и переадресация."}},{"@type":"Question","name":"Какие виды переадресации поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"Три режима: безусловная (все вызовы на один номер с ручным включением), условная (занят, недоступен, не отвечает) и по расписанию (автоматическое включение и выключение по расписанию недели)."}},{"@type":"Question","name":"Кому доступна интеграция с ОАТС?","acceptedAnswer":{"@type":"Answer","text":"Облачная АТС Билайн — российский сервис, поэтому раздел доступен пользователям из России. Остальные интеграции и функции приложения доступны всем."}}]}]}</script>
+  <script>(function(){try{var k='pz-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="ProZvonki"><span class="brand-mark"><img src="../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Навигация"><a href="../zvonilka-android/">Звонилка</a><a href="../crm-dlya-zvonkov/">CRM</a><a href="../uchet-zvonkov-klientov/">Учет звонков</a><a href="../otchety-po-zvonkam/">Отчеты</a></nav>
+    <a class="header-link" href="../#download">Скачать</a>
+  </header>
+  <main>
+    <section class="seo-page-hero">
+      <div class="seo-page-copy">
+        <nav class="breadcrumb" aria-label="Хлебные крошки"><a href="../">Главная</a><span>/</span><span>Интеграция с Билайн ОАТС</span></nav>
+        <p class="eyebrow">Интеграции · Телефония</p>
+        <h1>Интеграция ProZvonki с Билайн ОАТС</h1>
+        <p class="lead-copy">ProZvonki связывает Android-звонилку с облачной АТС Билайн: подтягивает статусы звонков в журнал и позволяет управлять переадресацией — безусловной, условной и по расписанию — прямо из приложения. Подключение по API-токену, без отдельного сервера.</p>
+        <p style="margin-top:28px"><a class="header-link" href="../nastrojka-beeline-oats/">Как настроить интеграцию →</a></p>
+      </div>
+      <div class="seo-visual" aria-label="Логотип Билайн">
+        <div class="seo-slideshow">
+          <figure style="animation:none;opacity:1"><img src="../beeline-logo.svg" alt="Логотип Билайн" width="400" height="400" style="max-width:min(360px,72%)"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-grid content-grid-single">
+        <div class="content-main">
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9"/><path d="M3 12a9 9 0 0 0 9 9 9 9 0 0 0 9-9"/><path d="M3 12h4"/><path d="M17 12h4"/></svg></span>Подключение по API-токену</h2><p>Интеграция настраивается одним токеном облачной АТС Билайн. В приложении вы указываете API-токен и свой номер в ОАТС — и сразу получаете доступ к синхронизации и переадресации. Токен хранится на устройстве в зашифрованном виде.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v6h6"/></svg></span>Синхронизация статусов звонков</h2><p>Приложение запрашивает из ОАТС статусы звонков за выбранный период и подтягивает их в журнал. Так видно реальные итоги вызовов через облачную АТС — отвеченные и пропущенные — рядом с остальной историей.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>Безусловная переадресация</h2><p>Перевод всех входящих вызовов на один номер с ручным включением и выключением. Удобно, когда нужно быстро направить все звонки на себя или на коллегу.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/><circle cx="12" cy="12" r="9"/></svg></span>Условная переадресация</h2><p>Перевод вызова срабатывает по условию: когда абонент занят, недоступен или не отвечает. Звонок не теряется, даже если основной номер не берёт трубку.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>Переадресация по расписанию</h2><p>Автоматическое включение и выключение переадресации по расписанию недели — например, в нерабочее время вызовы уходят на дежурного, а в рабочее остаются на основном номере. Расписание срабатывает само, без ручных действий.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>Без своего сервера</h2><p>Приложение обращается к облачной АТС Билайн напрямую по её API. Не нужен промежуточный сервер, а доступ ограничен вашим токеном.</p></article>
+          <div class="related-links"><a href="../nastrojka-beeline-oats/">Инструкция по настройке</a><a href="../integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="../otchety-po-zvonkam/">Отчёты по звонкам</a><a href="../#download">скачать ProZvonki</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы об интеграции с Билайн ОАТС</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Что даёт интеграция с Билайн ОАТС?</summary><p>Приложение подтягивает из облачной АТС Билайн статусы звонков и позволяет управлять переадресацией — безусловной, условной и по расписанию — прямо из звонилки.</p></details>
+        <details><summary>Как подключается интеграция?</summary><p>По API-токену облачной АТС Билайн. В приложении вы указываете токен и свой номер в ОАТС, после чего доступны синхронизация и переадресация.</p></details>
+        <details><summary>Какие виды переадресации поддерживаются?</summary><p>Три режима: <strong>безусловная</strong> (все вызовы на один номер с ручным включением), <strong>условная</strong> (занят, недоступен, не отвечает) и <strong>по расписанию</strong> (автоматическое включение и выключение по расписанию недели).</p></details>
+        <details><summary>Кому доступна интеграция с ОАТС?</summary><p>Облачная АТС Билайн — российский сервис, поэтому раздел доступен пользователям из России. Остальные интеграции и функции приложения доступны всем.</p></details>
+      </div>
+    </section>
+  </main>
+  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/obo-mne/">Обо мне</a></div></nav>
+  <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Главная</a> · <a href="../#download">Скачать</a> · <a href="../privacy/">Конфиденциальность</a></span></footer>
+</body>
+</html>
