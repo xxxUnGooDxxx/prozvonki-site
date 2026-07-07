@@ -213,24 +213,56 @@
     <loc>https://pro-zvonki.ru/integraciya-bitrix24/</loc>
     <lastmod>2026-07-07</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-integration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/bitrix24-integration/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-integration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/nastrojka-bitrix24/</loc>
     <lastmod>2026-07-07</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/bitrix24-setup/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-setup/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/integraciya-amocrm/</loc>
     <lastmod>2026-07-07</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-integration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/amocrm-integration/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-integration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/nastrojka-amocrm/</loc>
     <lastmod>2026-07-07</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/amocrm-setup/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-setup/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
   </url>
   <url>
