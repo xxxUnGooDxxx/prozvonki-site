@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Запись разговоров через Shizuku — настройка на телефоне — ProZvonki</title>
+  <meta name="description" content="Пошаговая инструкция, как включить запись телефонных разговоров в Android-звонилке ProZvonki через Shizuku: установка и запуск Shizuku, выдача разрешения, авто-запись всех звонков. Функция доступна только в версии из RuStore.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/">
+  <link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/">
+  <link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-recording-shizuku/">
+  <link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pro-zvonki.ru/zapis-razgovorov-shizuku/">
+  <meta property="og:title" content="Запись разговоров через Shizuku — настройка на телефоне — ProZvonki">
+  <meta property="og:description" content="Как включить запись разговоров в ProZvonki через Shizuku: установка и запуск Shizuku, разрешение, авто-запись звонков. Только в версии из RuStore.">
+  <meta property="og:image" content="https://pro-zvonki.ru/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Запись разговоров через Shizuku — ProZvonki">
+  <meta name="twitter:description" content="Пошаговая настройка записи телефонных разговоров через Shizuku. Только в версии из RuStore.">
+  <meta name="twitter:image" content="https://pro-zvonki.ru/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895','ym');ym(109706895,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProZvonki","item":"https://pro-zvonki.ru/"},{"@type":"ListItem","position":2,"name":"Запись разговоров через Shizuku","item":"https://pro-zvonki.ru/zapis-razgovorov-shizuku/"}]},{"@type":"HowTo","name":"Как настроить запись разговоров в ProZvonki через Shizuku","description":"Пошаговое включение записи телефонных разговоров в Android-звонилке ProZvonki через приложение Shizuku. Доступно только в версии из RuStore на Android 11 и новее.","step":[{"@type":"HowToStep","position":1,"name":"Установить версию ProZvonki из RuStore","text":"Запись разговоров есть только в сборке из RuStore. Версия из Google Play эту функцию не содержит, так как Google Play запрещает запись телефонных разговоров."},{"@type":"HowToStep","position":2,"name":"Установить Shizuku","text":"Скачайте и установите отдельное приложение Shizuku от RikkaApps с официальной страницы релизов на GitHub."},{"@type":"HowToStep","position":3,"name":"Запустить службу Shizuku","text":"Запустите службу Shizuku: на Android 11 и новее — через беспроводную отладку прямо на телефоне, либо через ADB с компьютера, либо в один тап при наличии root."},{"@type":"HowToStep","position":4,"name":"Открыть настройки записи в ProZvonki","text":"В ProZvonki откройте Настройки, раздел Данные, пункт Запись разговоров."},{"@type":"HowToStep","position":5,"name":"Выдать разрешение Shizuku","text":"Нажмите Выдать разрешение Shizuku и подтвердите запрос. Статус должен смениться на Shizuku готов."},{"@type":"HowToStep","position":6,"name":"Включить авто-запись звонков","text":"Включите переключатель Авто-запись всех звонков. Записи привязываются к звонкам в журнале и хранятся на устройстве в зашифрованном виде."}]}]}</script>
+  <script>(function(){try{var k='pz-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="ProZvonki"><span class="brand-mark"><img src="../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Навигация"><a href="../zvonilka-android/">Звонилка</a><a href="../crm-dlya-zvonkov/">CRM</a><a href="../uchet-zvonkov-klientov/">Учет звонков</a><a href="../otchety-po-zvonkam/">Отчеты</a><a href="../en/call-recording-shizuku/" hreflang="en" aria-label="English version">EN</a></nav>
+    <a class="header-link" href="../#download">Скачать</a>
+  </header>
+  <main>
+    <section class="seo-page-hero">
+      <div class="seo-page-copy">
+        <nav class="breadcrumb" aria-label="Хлебные крошки"><a href="../">Главная</a><span>/</span><span>Запись разговоров через Shizuku</span></nav>
+        <p class="eyebrow">Инструкция · Запись разговоров</p>
+        <h1>Запись разговоров через Shizuku</h1>
+        <p class="lead-copy">ProZvonki умеет автоматически записывать телефонные разговоры на Android 11 и новее — без root — с помощью приложения <strong>Shizuku</strong>. Записи сохраняются на телефоне в зашифрованном виде и привязываются к звонкам в журнале. Ниже — пошаговая настройка и важные оговорки.</p>
+        <p style="margin-top:28px"><a class="header-link" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener">Скачать Shizuku (GitHub) →</a></p>
+      </div>
+      <div class="seo-visual" aria-label="Логотип Shizuku">
+        <div class="seo-slideshow">
+          <figure style="animation:none;opacity:1"><img src="../shizuku-logo.png" alt="Логотип Shizuku" width="400" height="400" style="max-width:min(320px,72%)"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-grid content-grid-single">
+        <div class="content-main">
+
+          <div style="border:1px solid var(--line);background:var(--mint);border-radius:16px;padding:20px 22px;margin-bottom:28px">
+            <p style="margin:0 0 10px;font-weight:800;color:var(--ink)">Важно перед началом</p>
+            <ul style="margin:0;padding-left:20px;color:var(--text);line-height:1.6">
+              <li><strong>Только версия из RuStore.</strong> Запись разговоров есть <strong>лишь в сборке ProZvonki из RuStore</strong>. В версии из Google Play этой функции нет — Google Play не разрешает запись телефонных разговоров.</li>
+              <li><strong>Shizuku — не наше приложение.</strong> Shizuku разрабатывает сторонняя команда <a href="https://github.com/RikkaApps/Shizuku" target="_blank" rel="noopener">RikkaApps</a>. Мы не являемся авторами Shizuku и <strong>не несём ответственности за его работу</strong>. Скачивайте Shizuku только с официальной страницы релизов и используйте на свой риск.</li>
+              <li><strong>Требуется Android 11 или новее.</strong> На более старых версиях запись через Shizuku недоступна.</li>
+            </ul>
+          </div>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>Шаг 1. Установите ProZvonki из RuStore</h2><p>Убедитесь, что у вас установлена версия ProZvonki <strong>из RuStore</strong> — именно в ней есть раздел записи разговоров через Shizuku. Если приложение стояло из Google Play, удалите его и поставьте из RuStore. <a href="../#download">Ссылки на магазины</a> — на главной.</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span>Шаг 2. Установите приложение Shizuku</h2><p>Скачайте и установите <strong>Shizuku</strong> — отдельное приложение, которое даёт другим приложениям расширенные права без root. Берите его с официальной страницы релизов: <a href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener">github.com/RikkaApps/Shizuku/releases</a> (пакет <code>moe.shizuku.privileged.api</code>). Shizuku также есть в некоторых магазинах приложений — устанавливайте только из проверенного источника.</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="9"/></svg></span>Шаг 3. Запустите службу Shizuku</h2><p>Сама по себе установка Shizuku ещё не включает его — нужно запустить службу. Это официальный процесс от разработчика Shizuku. Выберите подходящий способ.</p>
+
+          <p style="margin:16px 0 4px;font-weight:800;color:var(--ink)">Способ A — беспроводная отладка (Android&nbsp;11+, без компьютера) — рекомендуется</p>
+          <ol style="margin:0;padding-left:20px;line-height:1.65">
+            <li>Включите <strong>параметры разработчика</strong>: <em>Настройки → «О телефоне»</em> и 7&nbsp;раз нажмите на <strong>«Номер сборки»</strong>, пока не появится «Вы стали разработчиком». На некоторых прошивках номер сборки находится в подразделе «Сведения о ПО» или «Версия».</li>
+            <li>Откройте <strong>«Для разработчиков»</strong>, включите <strong>«Отладка по USB»</strong>, затем найдите и включите <strong>«Беспроводная отладка»</strong> (Wireless debugging).</li>
+            <li>В приложении <strong>Shizuku</strong> нажмите запуск <strong>через беспроводную отладку</strong> — Shizuku предложит выполнить сопряжение.</li>
+            <li>В настройках телефона откройте <strong>«Беспроводная отладка → Подключение устройства с помощью кода»</strong> и введите <strong>код сопряжения</strong>, который Shizuku показывает в своём уведомлении (делается один раз).</li>
+            <li>Вернитесь в Shizuku и завершите запуск. Если не удаётся — выключите и снова включите беспроводную отладку. Если Shizuku пишет <em>«Поиск службы сопряжения»</em>, разрешите приложению <strong>работу в фоне</strong>.</li>
+          </ol>
+
+          <p style="margin:16px 0 4px;font-weight:800;color:var(--ink)">Способ B — через компьютер (ADB)</p>
+          <p style="margin:0">Подходит для Android&nbsp;10 и старше или если беспроводная отладка недоступна. Скачайте <strong>SDK Platform Tools</strong> от Google, включите на телефоне «Отладка по USB», подключите его к ПК по USB и подтвердите разрешение отладки. Затем выполните в терминале команду:</p>
+          <p style="margin:8px 0"><code>adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh</code></p>
+
+          <p style="margin:16px 0 4px;font-weight:800;color:var(--ink)">Способ C — root</p>
+          <p style="margin:0">Если у телефона есть root-права, служба Shizuku запускается в один тап прямо из приложения.</p>
+
+          <p style="margin-top:14px">Важно: без root службу Shizuku нужно запускать заново <strong>после каждой перезагрузки телефона</strong>. С root это можно настроить на автозапуск.</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></span>Шаг 4. Откройте настройки записи в ProZvonki</h2><p>В ProZvonki перейдите в <strong>Настройки → раздел «Данные» → «Запись разговоров»</strong>. Там появится блок <strong>ShizukiVoiceRecorder</strong> со статусом Shizuku. Возможные статусы: «Shizuku не запущен или не установлен», «Нет разрешения Shizuku», «Shizuku готов».</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>Шаг 5. Выдайте разрешение Shizuku</h2><p>Если статус «Нет разрешения Shizuku», нажмите кнопку <strong>«Выдать разрешение Shizuku»</strong> и подтвердите запрос во всплывающем окне Shizuku. Статус должен смениться на <strong>«Shizuku готов»</strong>.</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="6"/><circle cx="16" cy="12" r="3"/></svg></span>Шаг 6. Включите авто-запись звонков</h2><p>Когда статус «Shizuku готов», включите переключатель <strong>«Авто-запись всех звонков»</strong>. С этого момента входящие и исходящие разговоры записываются автоматически. Записи привязываются к соответствующим звонкам в журнале и хранятся на устройстве <strong>в зашифрованном виде</strong>. Под переключателем показывается диагностика последней записи.</p></article>
+
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>Особенности отдельных прошивок</h2><p>По рекомендациям разработчика Shizuku, на некоторых оболочках нужны дополнительные настройки:</p>
+          <ul style="margin:6px 0 0;padding-left:20px;line-height:1.65">
+            <li><strong>MIUI / HyperOS (Xiaomi, Redmi, POCO)</strong> — в параметрах разработчика смените «Стиль уведомлений об отладке» на <strong>«Android»</strong> и включите отдельный пункт <strong>«Отладка по USB (Настройки безопасности)»</strong>.</li>
+            <li><strong>ColorOS / Realme UI (OPPO, Realme, OnePlus)</strong> — отключите <strong>«Мониторинг разрешений»</strong> и включите <strong>«Отладка по USB (Настройки безопасности)»</strong>.</li>
+            <li><strong>Flyme (Meizu)</strong> — отключите <strong>«Защиту платежей Flyme»</strong>.</li>
+            <li><strong>Если Shizuku произвольно останавливается</strong> — разрешите приложению работу в фоне (снимите ограничения энергосбережения) и отключите режим передачи данных по USB в параметрах разработчика.</li>
+          </ul>
+          <p style="margin-top:10px">Если статус в ProZvonki не меняется на «Shizuku готов», перезапустите службу Shizuku и нажмите «Обновить статус».</p></article>
+
+          <div class="related-links"><a href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener">Скачать Shizuku</a><a href="https://shizuku.rikka.app/guide/setup/" target="_blank" rel="noopener">Официальное руководство Shizuku</a><a href="../zhurnal-zvonkov/">Журнал звонков</a><a href="../otchety-po-zvonkam/">Отчёты по звонкам</a><a href="../#download">скачать ProZvonki</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы о записи через Shizuku</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Почему запись разговоров доступна только в версии из RuStore?</summary><p>Google Play запрещает приложениям записывать телефонные разговоры, поэтому в сборке ProZvonki из Google Play этой функции нет. Запись через Shizuku есть только в версии, скачанной из RuStore.</p></details>
+        <details><summary>Shizuku — это ваше приложение?</summary><p>Нет. Shizuku — отдельное стороннее приложение от команды RikkaApps. Мы не являемся его разработчиками и не несём ответственности за его работу. Скачивайте Shizuku только с официальной страницы релизов на GitHub и используйте на свой риск.</p></details>
+        <details><summary>Нужен ли root для записи?</summary><p>Нет. На Android 11 и новее службу Shizuku можно запустить через беспроводную отладку прямо на телефоне — без компьютера и без root. Root — лишь необязательная альтернатива, которая упрощает запуск.</p></details>
+        <details><summary>Нужно ли что-то делать после перезагрузки телефона?</summary><p>Да. Без root служба Shizuku останавливается при выключении или перезагрузке телефона. После включения запустите Shizuku заново — иначе запись работать не будет.</p></details>
+        <details><summary>Какая версия Android нужна?</summary><p>Android 11 и новее. На более старых версиях запись через Shizuku недоступна — приложение покажет статус «Недоступно: нужен Android 11+».</p></details>
+        <details><summary>Где хранятся записи разговоров?</summary><p>Записи хранятся на самом устройстве в зашифрованном виде и автоматически привязываются к нужным звонкам в журнале. Никуда за пределы телефона они не передаются.</p></details>
+        <details><summary>Соблюдение закона о записи разговоров — на ком?</summary><p>Запись телефонных разговоров регулируется законодательством вашей страны. Использование функции и предупреждение собеседника о записи — на вашей ответственности.</p></details>
+      </div>
+    </section>
+  </main>
+  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/zapis-razgovorov-shizuku/">Запись разговоров</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/integraciya-amocrm/">Интеграция с amoCRM</a><a href="/obo-mne/">Обо мне</a></div></nav>
+  <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Главная</a> · <a href="../#download">Скачать</a> · <a href="../privacy/">Конфиденциальность</a></span></footer>
+</body>
+</html>
