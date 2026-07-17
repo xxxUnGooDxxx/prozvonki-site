@@ -273,6 +273,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/zapis-zvonkov-android/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/en/call-recording-shizuku/</loc>
     <lastmod>2026-07-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/"/>
