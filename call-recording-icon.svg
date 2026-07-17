@@ -1,13 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Call recording</title><desc id="desc">A phone handset, audio waveform and recording indicator</desc>
+  <title id="title">REC microphone</title>
+  <desc id="desc">Microphone icon with a red recording dot and REC label</desc>
   <defs>
-    <linearGradient id="bg" x1="70" y1="54" x2="442" y2="458" gradientUnits="userSpaceOnUse"><stop stop-color="#fff7ed"/><stop offset="1" stop-color="#ffedd5"/></linearGradient>
-    <linearGradient id="phone" x1="135" y1="128" x2="352" y2="392" gradientUnits="userSpaceOnUse"><stop stop-color="#ff8a34"/><stop offset="1" stop-color="#e65318"/></linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#9a3412" flood-opacity=".18"/></filter>
+    <linearGradient id="mic" x1="178" y1="92" x2="326" y2="346" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff9a4d"/>
+      <stop offset="1" stop-color="#e65318"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#7c2d12" flood-opacity=".18"/>
+    </filter>
   </defs>
-  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#bg)"/>
-  <circle cx="404" cy="108" r="42" fill="#fff" opacity=".95"/><circle cx="404" cy="108" r="20" fill="#ef4444"/><circle cx="404" cy="108" r="29" fill="none" stroke="#ef4444" stroke-width="5" opacity=".22"/>
-  <g fill="none" stroke="#e65318" stroke-linecap="round" stroke-width="13" opacity=".8"><path d="M292 198v50"/><path d="M327 173v100"/><path d="M362 201v44"/><path d="M397 184v78"/></g>
-  <path filter="url(#shadow)" fill="url(#phone)" d="M142 105c13-8 31-5 40 7l58 76c9 12 8 29-3 40l-35 34c22 47 57 82 104 104l34-35c11-11 28-12 40-3l76 58c12 9 15 27 7 40l-25 41c-10 16-29 24-48 20-172-37-310-175-347-347-4-19 4-38 20-48l39-24Z" transform="translate(12 -20) scale(.88)"/>
-  <path d="M145 341c31 35 68 63 110 82" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="14" opacity=".42"/>
+
+  <g filter="url(#shadow)">
+    <rect x="176" y="72" width="160" height="242" rx="80" fill="url(#mic)"/>
+    <path d="M137 239v18c0 66 53 119 119 119s119-53 119-119v-18" fill="none" stroke="#e65318" stroke-width="24" stroke-linecap="round"/>
+    <path d="M256 376v62M202 438h108" fill="none" stroke="#e65318" stroke-width="24" stroke-linecap="round"/>
+    <path d="M207 132h98M207 178h98M207 224h98" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".62"/>
+  </g>
+
+  <g aria-label="REC">
+    <circle cx="113" cy="100" r="23" fill="#ef4444"/>
+    <circle cx="113" cy="100" r="34" fill="none" stroke="#ef4444" stroke-width="5" opacity=".2"/>
+    <text x="153" y="116" fill="#ef4444" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="4">REC</text>
+  </g>
 </svg>
