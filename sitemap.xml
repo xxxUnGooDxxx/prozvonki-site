@@ -276,6 +276,14 @@
     <loc>https://pro-zvonki.ru/zapis-zvonkov-android/</loc>
     <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/android-call-recording/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/android-call-recording/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/android-call-recording/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
   </url>
   <url>
