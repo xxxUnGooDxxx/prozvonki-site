@@ -1,26 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">REC microphone</title>
-  <desc id="desc">Microphone icon with a red recording dot and REC label</desc>
+  <title id="title">REC</title>
+  <desc id="desc">Red recording dot and REC label</desc>
   <defs>
-    <linearGradient id="mic" x1="178" y1="92" x2="326" y2="346" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ff9a4d"/>
-      <stop offset="1" stop-color="#e65318"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
-      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#7c2d12" flood-opacity=".18"/>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#991b1b" flood-opacity=".16"/>
     </filter>
   </defs>
-
   <g filter="url(#shadow)">
-    <rect x="176" y="72" width="160" height="242" rx="80" fill="url(#mic)"/>
-    <path d="M137 239v18c0 66 53 119 119 119s119-53 119-119v-18" fill="none" stroke="#e65318" stroke-width="24" stroke-linecap="round"/>
-    <path d="M256 376v62M202 438h108" fill="none" stroke="#e65318" stroke-width="24" stroke-linecap="round"/>
-    <path d="M207 132h98M207 178h98M207 224h98" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".62"/>
-  </g>
-
-  <g aria-label="REC">
-    <circle cx="113" cy="100" r="23" fill="#ef4444"/>
-    <circle cx="113" cy="100" r="34" fill="none" stroke="#ef4444" stroke-width="5" opacity=".2"/>
-    <text x="153" y="116" fill="#ef4444" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="4">REC</text>
+    <circle cx="116" cy="256" r="64" fill="#ef4444"/>
+    <circle cx="116" cy="256" r="84" fill="none" stroke="#ef4444" stroke-width="12" opacity=".2"/>
+    <text x="216" y="294" fill="#ef4444" font-family="Arial, Helvetica, sans-serif" font-size="108" font-weight="800" letter-spacing="5">REC</text>
   </g>
 </svg>
