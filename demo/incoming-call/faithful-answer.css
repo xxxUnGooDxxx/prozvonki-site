@@ -28,3 +28,17 @@ html[data-theme="dark"] .demo-page .demo-effects [data-edge-color].is-selected,h
 .demo-page .inc-image-tile{padding:0;border:0;background:transparent;font:inherit}
 .demo-page .inc-image-tile figure{border-color:transparent;background:transparent}
 .demo-page .inc-image-tile.is-selected figure{border-color:var(--inc-green)}
+
+@media(max-width:860px){
+  .demo-page .customizer-shell{display:block!important}
+  .demo-page .incoming-real{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+  .demo-page .incoming-real-preview{grid-column:1!important;grid-row:1!important;width:100%;position:sticky!important;z-index:18;top:68px!important;height:280px;min-height:280px!important;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:0 0 20px 20px;background:color-mix(in srgb,var(--white) 94%,transparent);backdrop-filter:blur(14px);box-shadow:0 14px 28px rgba(16,35,28,.12)}
+  .demo-page .incoming-real-phone{position:absolute!important;top:8px!important;left:50%;width:290px!important;height:auto!important;margin-left:-54px;transform:scale(.37);transform-origin:top left;box-shadow:0 18px 44px rgba(16,35,28,.32)}
+  .demo-page .incoming-real-settings{position:relative;z-index:1;padding-top:14px}
+  .demo-page .inc-switch-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px}
+  .demo-page .inc-switch{flex:0 0 42px;width:42px;min-width:42px;margin:0}
+  .demo-page .inc-color-list,.demo-page .inc-text-color-list,.demo-page .inc-image-list{max-width:100%;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;overscroll-behavior-inline:contain;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+  .demo-page .inc-color-list::-webkit-scrollbar,.demo-page .inc-text-color-list::-webkit-scrollbar,.demo-page .inc-image-list::-webkit-scrollbar{display:none;width:0;height:0}
+  .demo-page .inc-color-dot,.demo-page .inc-image-tile{scroll-snap-align:start}
+  html[data-theme="dark"] .demo-page .incoming-real-preview{background:color-mix(in srgb,#0f1411 94%,transparent);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+}
