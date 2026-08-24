@@ -36,7 +36,15 @@
     <loc>https://pro-zvonki.ru/zashchita-blizkih/</loc>
     <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zashchita-blizkih/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/protect-loved-ones/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zashchita-blizkih/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/protect-loved-ones/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zashchita-blizkih/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/protect-loved-ones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/en/protect-loved-ones/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/blokirovka-spam-zvonkov/</loc>
