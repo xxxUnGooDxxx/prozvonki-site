@@ -47,7 +47,7 @@
     <section class="section">
       <div class="content-grid content-grid-single">
         <div class="content-main">
-          <div><p>Last updated: June 13, 2026.</p></div>
+          <div><p>Last updated: August 25, 2026.</p></div>
 
           <div>
             <h2>1. Who processes the data</h2>
@@ -101,11 +101,29 @@
           </div>
 
           <div>
+            <h2>5.1. Protect Loved Ones</h2>
+            <p>This feature is off by default and is configured by the phone owner with their consent. To provide it, the app processes the following locally:</p>
+            <ul>
+              <li>the names and numbers of one to three selected trusted contacts;</li>
+              <li>warning intervals, feature state and the state of unknown-call blocking;</li>
+              <li>the settings PIN as a cryptographic derivative with an individual salt — the plaintext PIN is not stored;</li>
+              <li>the TOTP secret used by an authenticator and backup codes. Security secrets are kept in protected app storage using Android Keystore.</li>
+            </ul>
+            <p><strong>Contacts.</strong> Access is used on the device to distinguish saved contacts from unknown numbers and to exempt trusted people and emergency numbers from blocking. The address book and selected trusted numbers are not uploaded to the developer or an external database.</p>
+            <p><strong>New incoming SMS.</strong> When protection is enabled, the app may inspect only a newly received message to identify signs of a one-time password (OTP), or a message from a trusted number during a protected call. The app does not request <code>READ_SMS</code>, does not read SMS history, does not store or upload the inspected message content and does not write it to diagnostic logs.</p>
+            <p><strong>Outgoing safety SMS.</strong> The app may automatically send selected trusted people an alert, call duration, the unknown party's number and instructions. <strong>No unlock code is sent in the SMS.</strong> The message is delivered through the mobile carrier and may be charged under the SIM plan; its recipient is the trusted person selected by the phone owner.</p>
+            <p><strong>Authenticator and unlocking.</strong> The six-digit code is generated locally by an authenticator on the trusted person's phone and requires no internet connection. A previously saved one-use backup code can be used instead. The settings PIN cannot unlock calls.</p>
+            <p>When emergency blocking is triggered, the app locally retains the required protection settings and cryptographic number identifiers so it can allow previously saved contacts while blocking unknown numbers. This information stays in private app storage and is removed when app data is cleared or the app is uninstalled. See the <a href="../en/protect-loved-ones-setup/">setup guide</a> for details.</p>
+          </div>
+
+          <div>
             <h2>6. App permissions</h2>
             <p>The app requests permissions only for its dialer features:</p>
             <ul>
               <li><strong>Phone, call log, phone state</strong> — to make and receive calls, show the call log and act as the default dialer;</li>
               <li><strong>Contacts</strong> — to show names, favorites and speed dial, and optionally to save contacts;</li>
+              <li><strong>Receiving new SMS</strong> — to detect an OTP or a message from a trusted person when Protect Loved Ones is enabled, without reading message history;</li>
+              <li><strong>Sending SMS</strong> — for safety alerts to trusted people and other SMS features enabled by the user;</li>
               <li><strong>Microphone</strong> — for talking during a call;</li>
               <li><strong>Notifications, full-screen notifications, background work</strong> — to show incoming and active calls and reminders;</li>
               <li><strong>Bluetooth</strong> — for calls via a headset.</li>
@@ -154,7 +172,7 @@
 
           <div>
             <h2>11. Data security</h2>
-            <p>Data that leaves the device is encrypted in transit over a secure connection (HTTPS/TLS). Local data is stored in the app's protected storage; a backup can additionally be protected with a password.</p>
+            <p>Data that leaves the device is encrypted in transit over a secure connection (HTTPS/TLS). Local data is kept in private app storage; the PIN, TOTP secret and backup codes receive additional Android Keystore protection. A backup can additionally be protected with a password.</p>
           </div>
 
           <div>
@@ -186,7 +204,7 @@
             <p>For any privacy or data-processing questions: <a href="mailto:pro.zvonok@yandex.ru">pro.zvonok@yandex.ru</a>.</p>
           </div>
 
-          <div class="related-links"><a href="../">Home</a><a href="../privacy/">Русская версия</a><a href="../#download">Download ProZvonki</a></div>
+          <div class="related-links"><a href="../en/protect-loved-ones/">Protect Loved Ones</a><a href="../">Home</a><a href="../privacy/">Русская версия</a><a href="../#download">Download ProZvonki</a></div>
         </div>
       </div>
     </section>
