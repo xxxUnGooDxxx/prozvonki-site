@@ -66,7 +66,7 @@
     notice.setAttribute('role', 'dialog');
     notice.setAttribute('aria-label', ru ? 'Уведомление о файлах cookie' : 'Cookie notice');
     notice.innerHTML = ru
-      ? '<p>Для улучшения работы сайта и взаимодействия с пользователями мы используем файлы cookie. Продолжая работу с сайтом, вы разрешаете использование файлов cookie. Обработка вашей персональной информации осуществляется в соответствии с <a href="/privacy/#site-cookies">политикой обработки персональных данных</a>. Вы всегда можете отключить cookie в настройках браузера. Если cookie отключены, некоторые функции сайта могут быть недоступны.</p><button type="button">Понятно</button>'
+      ? '<p>Для улучшения работы сайта и взаимодействия с пользователями сайта мы используем файлы cookie. Продолжая работу с сайтом, вы разрешаете использование cookie-файлов. Обработка вашей персональной информации на нашем сайте осуществляется в соответствии с <a href="/privacy/#site-cookies">политикой обработки персональных данных</a>. Вы всегда можете отключить файлы cookie в настройках вашего браузера. Если файлы cookie отключены, это может означать, что вы не можете в полной мере использовать все функции нашего сайта.</p><button type="button">Понятно</button>'
       : '<p>We use cookies and Yandex.Metrica to understand how visitors use the website and improve ProZvonki. Learn more in our <a href="/privacy-en/#site-cookies">privacy policy</a>.</p><button type="button">Got it</button>';
     notice.querySelector('button').addEventListener('click', function () {
       try { localStorage.setItem(CONSENT_KEY, 'accepted'); } catch (e) {}
