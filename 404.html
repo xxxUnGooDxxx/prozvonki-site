@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — ProZvonki</title>
+  <meta name="description" content="Запрошенная страница не найдена. Вернитесь на главную страницу ProZvonki.">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --green:#15985d; --green-dark:#086b42; --ink:#142019; --text:#42544a; --line:#d9e9df; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-width:320px; color:var(--ink); background:#fff; line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .site-header { min-height:69px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px clamp(20px,5vw,72px); border-bottom:1px solid var(--line); background:rgba(255,255,255,.94); }
+    .brand { display:inline-flex; align-items:center; gap:10px; font-weight:850; }
+    .brand-mark { position:relative; width:38px; height:38px; flex:0 0 38px; border-radius:9px; background:linear-gradient(145deg,#20b970,#0b7546); box-shadow:0 8px 22px rgba(21,152,93,.2); }
+    .brand-mark::before { content:""; position:absolute; inset:8px 11px; border:3px solid #fff; border-top-width:5px; border-radius:4px; transform:rotate(-22deg); }
+    .brand-mark::after { content:""; position:absolute; width:5px; height:5px; left:8px; bottom:7px; border-radius:50%; background:#fff; box-shadow:17px -17px 0 #fff; }
+    .header-link,.primary { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 19px; border-radius:8px; background:var(--green); color:#fff; font-weight:800; box-shadow:0 12px 28px rgba(21,152,93,.18); }
+    .header-link:hover,.primary:hover { background:var(--green-dark); }
+    main { min-height:calc(100vh - 69px); display:grid; place-items:center; padding:clamp(48px,8vw,100px) clamp(20px,5vw,72px); background:radial-gradient(circle at 75% 35%,rgba(21,152,93,.14),transparent 31%),linear-gradient(180deg,#fff 0%,#f5fbf7 100%); }
+    .error-card { width:min(100%,760px); text-align:center; }
+    .error-code { margin:0 0 22px; color:var(--green); font-size:clamp(84px,16vw,158px); font-weight:900; line-height:.75; letter-spacing:-.07em; }
+    .eyebrow { margin:0 0 14px; color:var(--green-dark); font-size:13px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(38px,6vw,66px); line-height:1; letter-spacing:-.035em; }
+    .copy { max-width:610px; margin:24px auto 0; color:var(--text); font-size:clamp(18px,2vw,22px); }
+    .actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:34px; }
+    .actions a { min-height:48px; padding:0 22px; border-radius:8px; font-weight:800; }
+    .secondary { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); background:#fff; color:var(--green-dark); }
+    .secondary:hover { border-color:var(--green); }
+    @media (max-width:520px) { .site-header { padding:12px 18px; } .header-link { min-height:40px; padding:0 14px; font-size:14px; } .actions { flex-direction:column; } .actions a { width:100%; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="ProZvonki — на главную"><span class="brand-mark" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <a class="header-link" href="/">На главную</a>
+  </header>
+  <main>
+    <section class="error-card" aria-labelledby="error-title">
+      <p class="error-code" aria-hidden="true">404</p>
+      <p class="eyebrow">Страница не найдена</p>
+      <h1 id="error-title">Кажется, такого номера нет</h1>
+      <p class="copy">Возможно, адрес набран с ошибкой или страница была перемещена. Вернитесь на главную или посмотрите возможности ProZvonki.</p>
+      <div class="actions"><a class="primary" href="/">Вернуться на главную</a><a class="secondary" href="/#site-links">Все возможности</a></div>
+    </section>
+  </main>
+</body>
+</html>
