@@ -55,7 +55,7 @@
     var style = document.createElement('style');
     style.textContent =
       '.cookie-notice{position:fixed;z-index:1000;left:clamp(12px,3vw,36px);right:clamp(12px,3vw,36px);bottom:clamp(12px,3vw,28px);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px 18px 24px;border:1px solid var(--line,#d9e9df);border-radius:14px;background:rgba(255,255,255,.97);color:var(--text,#26382f);box-shadow:0 18px 55px rgba(20,32,25,.2);backdrop-filter:blur(16px);font:500 15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
-      '.cookie-notice p{margin:0;max-width:980px}.cookie-notice a{color:var(--green-dark,#086b42);font-weight:800;text-decoration:underline;text-underline-offset:3px}' +
+      '.cookie-notice p{flex:1 1 auto;min-width:0;margin:0}.cookie-notice a{color:var(--green-dark,#086b42);font-weight:800;text-decoration:underline;text-underline-offset:3px}' +
       '.cookie-notice button{flex:0 0 auto;min-height:44px;padding:0 22px;border:0;border-radius:8px;background:var(--green,#15985d);color:#fff;font:800 14px/1 inherit;cursor:pointer;box-shadow:0 10px 24px rgba(21,152,93,.2)}.cookie-notice button:hover{background:var(--green-dark,#086b42)}' +
       'html[data-theme="dark"] .cookie-notice{border-color:#28342e;background:rgba(20,27,23,.97);color:#d7e2dc}' +
       '@media(max-width:680px){.cookie-notice{align-items:stretch;flex-direction:column;gap:14px;padding:18px}.cookie-notice button{width:100%}}';
