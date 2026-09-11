@@ -17,6 +17,15 @@
     <loc>https://pro-zvonki.ru/faq/</loc>
     <lastmod>2026-09-11</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/faq/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/faq/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/faq/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/zvonilka-android/</loc>
