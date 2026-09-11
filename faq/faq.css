@@ -36,6 +36,10 @@
 .faq-nav-inner a:hover{border-color:var(--green);color:var(--green)}
 .faq-nav-inner a.active{background:var(--green);border-color:var(--green);color:#fff}
 
+/* Путь к настройке внутри приложения */
+.faq-path{margin:2px 20px 12px;padding:9px 12px;background:var(--mint);border-left:3px solid var(--green);border-radius:6px;color:var(--text);font-size:14px;line-height:1.55}
+.faq-path b{color:var(--green-dark);font-weight:800}
+
 /* Ссылка «Подробнее» под ответом */
 .faq-more{display:inline-block;margin:2px 20px 18px;font-weight:700;color:var(--green);text-decoration:none}
 .faq-more:hover{text-decoration:underline}
