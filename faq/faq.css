@@ -1,0 +1,42 @@
+/* Локальные стили страницы FAQ. Используют глобальные переменные из ../styles.css,
+   поэтому светлая и тёмная темы работают автоматически. */
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero-actions .button{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--green);border-radius:12px;text-decoration:none;font-weight:700}
+.hero-actions .primary{background:var(--green);color:#fff}
+.hero-actions .secondary{color:var(--green);background:var(--white)}
+
+/* Поиск по вопросам */
+.faq-search{max-width:620px;margin:22px 0 4px}
+.faq-search label{display:block;font-weight:700;margin-bottom:8px;color:var(--text)}
+.faq-search-field{position:relative}
+.faq-search input{width:100%;box-sizing:border-box;padding:14px 44px 14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--white);color:var(--text);font-size:16px}
+.faq-search input:focus{outline:none;border-color:var(--green)}
+.faq-search-field:before{content:"🔎";position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.6}
+.faq-search-hint{margin-top:8px;color:var(--muted);font-size:14px}
+
+/* Оглавление-чипы */
+.faq-toc{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}
+.faq-toc a{display:inline-flex;align-items:center;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--green-dark);text-decoration:none;font-weight:700;font-size:14px}
+.faq-toc a:hover{border-color:var(--green);color:var(--green)}
+
+/* Ссылка «Подробнее» под ответом */
+.faq-more{display:inline-block;margin:2px 20px 18px;font-weight:700;color:var(--green);text-decoration:none}
+.faq-more:hover{text-decoration:underline}
+.faq-list details .faq-more{padding:0}
+
+/* Служебные состояния поиска */
+.faq-empty{display:none;padding:18px 0;color:var(--muted)}
+.faq-empty.show{display:block}
+.section.faq-hidden{display:none}
+
+/* Блок «Не нашли ответ?» */
+.faq-cta{background:var(--mint);border:1px solid var(--line);border-radius:16px;padding:26px}
+.faq-cta h2{margin-top:0}
+.faq-cta p{color:var(--muted)}
+.faq-cta .hero-actions{margin-top:16px}
+
+@media(max-width:760px){
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-actions .button{width:100%;min-height:52px}
+}
