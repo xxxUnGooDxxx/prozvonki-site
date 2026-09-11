@@ -9,7 +9,7 @@
 .faq-page .section{padding-block:clamp(22px,3.4vw,40px)}
 .faq-page .section-head{margin-bottom:16px}
 /* Якорь секции останавливается ниже липкой шапки и полосы разделов. */
-.faq-page .section[id]{scroll-margin-top:124px}
+.faq-page .section[id]{scroll-margin-top:172px}
 @media(max-width:760px){.faq-page .section[id]{scroll-margin-top:60px}}
 
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
@@ -29,7 +29,9 @@
 /* Липкая полоса разделов: остаётся вверху при прокрутке. */
 .faq-nav{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line);box-shadow:0 6px 16px rgba(16,92,56,.06)}
 @media(min-width:761px){.faq-nav{top:68px}}
+/* Мобильно: одна строка со свайпом. Десктоп: чипы переносятся в несколько строк. */
 .faq-nav-inner{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px clamp(16px,5vw,72px);scrollbar-width:thin}
+@media(min-width:761px){.faq-nav-inner{flex-wrap:wrap;overflow-x:visible}}
 .faq-nav-inner a{flex:0 0 auto;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--green-dark);text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap}
 .faq-nav-inner a:hover{border-color:var(--green);color:var(--green)}
 .faq-nav-inner a.active{background:var(--green);border-color:var(--green);color:#fff}

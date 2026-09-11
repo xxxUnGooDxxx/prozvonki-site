@@ -46,6 +46,8 @@
 
   function centerChip(a) {
     if (!toc) return;
+    // Только когда полоса прокручивается по горизонтали (мобильная одна строка).
+    if (toc.scrollWidth <= toc.clientWidth + 1) return;
     var target = a.offsetLeft - toc.clientWidth / 2 + a.clientWidth / 2;
     toc.scrollTo({ left: target, behavior: 'smooth' });
   }
