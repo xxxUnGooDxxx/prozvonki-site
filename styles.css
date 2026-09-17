@@ -78,6 +78,7 @@ p { margin: 0; }
 .store-badge:hover { transform: translateY(-1px); }
 .store-badge img { width: 216px; height: auto; display: block; }
 .store-badge-rustore { box-shadow: 0 14px 36px rgba(17,95,58,.08); }
+.store-badge-appgallery { box-shadow: 0 14px 36px rgba(17,95,58,.08); }
 
 .hero-proof { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .hero-proof span { padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.78); color: var(--muted); font-size: 13px; font-weight: 750; }
