@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интеграция с Мегафон ВАТС 2.0 — статусы, записи, переадресация — ProZvonki</title>
+  <meta name="description" content="Интеграция Android-звонилки ProZvonki с облачной АТС Мегафон (ВАТС 2.0): синхронизация статусов звонков, скачивание записей разговоров, безусловная переадресация на личный мобильный и переадресация по расписанию. Подключение по JWT-токену и логину сотрудника.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pro-zvonki.ru/integraciya-megafon-vats/">
+  <link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-megafon-vats/">
+  <link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-megafon-vats/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pro-zvonki.ru/integraciya-megafon-vats/">
+  <meta property="og:title" content="Интеграция с Мегафон ВАТС 2.0 — статусы, записи и переадресация — ProZvonki">
+  <meta property="og:description" content="Синхронизация статусов звонков, записи разговоров и управление переадресацией облачной АТС Мегафон прямо из Android-звонилки. Подключение по JWT-токену.">
+  <meta property="og:image" content="https://pro-zvonki.ru/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Интеграция с Мегафон ВАТС 2.0 — ProZvonki">
+  <meta name="twitter:description" content="Статусы звонков, записи разговоров и переадресация облачной АТС Мегафон в Android-звонилке.">
+  <meta name="twitter:image" content="https://pro-zvonki.ru/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895','ym');ym(109706895,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProZvonki","item":"https://pro-zvonki.ru/"},{"@type":"ListItem","position":2,"name":"Интеграция с Мегафон ВАТС 2.0","item":"https://pro-zvonki.ru/integraciya-megafon-vats/"}]},{"@type":"FAQPage","@id":"https://pro-zvonki.ru/integraciya-megafon-vats/#faq","mainEntity":[{"@type":"Question","name":"Что даёт интеграция с Мегафон ВАТС 2.0?","acceptedAnswer":{"@type":"Answer","text":"Приложение подтягивает из облачной АТС Мегафон статусы звонков, скачивает записи разговоров и позволяет управлять переадресацией — безусловной и по расписанию — прямо из звонилки."}},{"@type":"Question","name":"Как подключается интеграция?","acceptedAnswer":{"@type":"Answer","text":"По JWT-токену (ключ API) из веб-кабинета ВАТС и логину сотрудника. Токен хранится на устройстве в зашифрованном виде. Для доступа к API часто требуется добавить IP в белый список в кабинете ВАТС."}},{"@type":"Question","name":"Какая переадресация поддерживается?","acceptedAnswer":{"@type":"Answer","text":"Безусловная — дозвон всех вызовов на личный мобильный (только на личный либо одновременно с рабочими устройствами с задержкой) и по расписанию — автоматическое включение и выключение по расписанию недели. Условной переадресации у Мегафон ВАТС 2.0 нет."}},{"@type":"Question","name":"Нужно ли разрешение на точные будильники?","acceptedAnswer":{"@type":"Answer","text":"Для переадресации по расписанию — да. Приложение переключает переадресацию по точным будильникам, поэтому на Android 12 и новее нужно выдать разрешение «Точные будильники», а на строгих оболочках — разрешить автозапуск и снять ограничение батареи, иначе расписание сработает неточно."}},{"@type":"Question","name":"Кому доступна интеграция с ВАТС?","acceptedAnswer":{"@type":"Answer","text":"Облачная АТС Мегафон — российский сервис, поэтому раздел доступен пользователям из России. Остальные интеграции и функции приложения доступны всем."}}]}]}</script>
+  <script>(function(){try{var k='pz-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="ProZvonki"><span class="brand-mark"><img src="../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Навигация"><a href="../zvonilka-android/">Звонилка</a><a href="../crm-dlya-zvonkov/">CRM</a><a href="../uchet-zvonkov-klientov/">Учет звонков</a><a href="../otchety-po-zvonkam/">Отчеты</a><a href="/faq/">Вопросы</a></nav>
+    <a class="header-link" href="../#download">Скачать</a>
+  </header>
+  <main>
+    <section class="seo-page-hero">
+      <div class="seo-page-copy">
+        <nav class="breadcrumb" aria-label="Хлебные крошки"><a href="../">Главная</a><span>/</span><span>Интеграция с Мегафон ВАТС 2.0</span></nav>
+        <p class="eyebrow">Интеграции · Телефония</p>
+        <h1>Интеграция ProZvonki с Мегафон ВАТС 2.0</h1>
+        <p class="lead-copy">ProZvonki связывает Android-звонилку с облачной АТС Мегафон (ВАТС 2.0): подтягивает статусы звонков в журнал, скачивает записи разговоров и позволяет управлять переадресацией — безусловной и по расписанию — прямо из приложения. Подключение по JWT-токену и логину сотрудника, без отдельного сервера.</p>
+        <p style="margin-top:28px"><a class="header-link" href="../nastrojka-megafon-vats/">Как настроить интеграцию →</a></p>
+      </div>
+      <div class="seo-visual" aria-label="Логотип Мегафон">
+        <div class="seo-slideshow">
+          <figure style="animation:none;opacity:1"><img src="../megafon-logo.svg" alt="Логотип Мегафон" width="400" height="400" style="max-width:min(360px,72%)"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-grid content-grid-single">
+        <div class="content-main">
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>Подключение по токену и логину</h2><p>Интеграция настраивается ключом API (JWT-токеном) из веб-кабинета ВАТС и логином сотрудника. В приложении вы указываете токен и полный логин — и получаете доступ к синхронизации, записям и переадресации. Токен хранится на устройстве в зашифрованном виде.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v6h6"/></svg></span>Синхронизация статусов звонков</h2><p>Приложение запрашивает из ВАТС отчёт по звонкам за выбранный период и подтягивает их в журнал: направление, длительность разговора и ожидания, линия ВАТС, реально пропущенные и состоявшиеся. Так видно итоги вызовов через облачную АТС рядом с остальной историей.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg></span>Записи разговоров</h2><p>Для звонков с записью приложение скачивает аудиофайл разговора прямо из облачной АТС Мегафон. Записи сохраняются на устройстве в зашифрованном виде — их можно прослушать в карточке звонка.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>Безусловная переадресация на личный</h2><p>Дозвон всех рабочих вызовов на личный мобильный сотрудника с ручным включением и выключением. Доступно два режима: <strong>только на личный</strong> (чистый перевод) и <strong>совместно с рабочим устройством</strong> — личный звонит вместе с рабочими, с настраиваемой задержкой.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>Переадресация по расписанию</h2><p>Автоматическое включение и выключение дозвона на личный по расписанию недели — например, в нерабочее время вызовы уходят на личный мобильный, а в рабочее остаются на рабочих устройствах. Интервал может переходить через полночь. Переключение работает по <strong>точным будильникам</strong> и сохраняется после перезагрузки телефона.</p></article>
+          <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>Без своего сервера</h2><p>Приложение обращается к облачной АТС Мегафон напрямую по её API. Промежуточный сервер не нужен, а доступ ограничен вашим токеном. Для API-доступа в кабинете ВАТС обычно нужно добавить IP в белый список.</p></article>
+          <div class="related-links"><a href="../nastrojka-megafon-vats/">Инструкция по настройке</a><a href="../integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="../zapis-razgovorov-shizuku/">Запись разговоров</a><a href="../otchety-po-zvonkam/">Отчёты по звонкам</a><a href="../#download">скачать ProZvonki</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы об интеграции с Мегафон ВАТС 2.0</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Что даёт интеграция с Мегафон ВАТС 2.0?</summary><p>Приложение подтягивает из облачной АТС Мегафон статусы звонков, скачивает записи разговоров и позволяет управлять переадресацией — безусловной и по расписанию — прямо из звонилки.</p></details>
+        <details><summary>Как подключается интеграция?</summary><p>По JWT-токену (ключ API) из веб-кабинета ВАТС и логину сотрудника. Токен хранится на устройстве в зашифрованном виде. Для доступа к API часто требуется добавить IP в белый список в кабинете ВАТС.</p></details>
+        <details><summary>Какая переадресация поддерживается?</summary><p><strong>Безусловная</strong> — дозвон всех вызовов на личный мобильный (только на личный либо одновременно с рабочими устройствами с задержкой) и <strong>по расписанию</strong> — автоматическое включение и выключение по расписанию недели. Условной переадресации (занят / недоступен / не отвечает) у Мегафон ВАТС 2.0 нет — она есть у <a href="../integraciya-beeline-oats/">Билайн ОАТС</a>.</p></details>
+        <details><summary>Нужно ли разрешение на точные будильники?</summary><p>Для переадресации по расписанию — да. Приложение переключает переадресацию по точным будильникам, поэтому на Android 12 и новее нужно выдать разрешение «Точные будильники», а на строгих оболочках — разрешить автозапуск и снять ограничение батареи, иначе расписание сработает неточно. Подробнее — в <a href="../nastrojka-megafon-vats/">инструкции по настройке</a> и на странице <a href="../nastrojka-telefona/">настройки телефона</a>.</p></details>
+        <details><summary>Кому доступна интеграция с ВАТС?</summary><p>Облачная АТС Мегафон — российский сервис, поэтому раздел доступен пользователям из России. Остальные интеграции и функции приложения доступны всем.</p></details>
+      </div>
+    </section>
+  </main>
+  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/zapis-razgovorov-shizuku/">Запись разговоров</a><a href="/integraciya-megafon-vats/">Интеграция с Мегафон ВАТС</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/integraciya-amocrm/">Интеграция с amoCRM</a><a href="/obo-mne/">Обо мне</a></div></nav>
+  <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Главная</a> · <a href="../#download">Скачать</a> · <a href="../privacy/">Конфиденциальность</a></span></footer>
+</body>
+</html>
