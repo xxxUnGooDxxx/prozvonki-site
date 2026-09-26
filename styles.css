@@ -357,6 +357,8 @@ p { margin: 0; }
 .side-card img { width: 100%; max-height: 280px; object-fit: contain; filter: drop-shadow(0 22px 34px rgba(10,66,40,.15)); }
 .related-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .related-links a { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--green-dark); font-weight: 800; background: #fff; }
+.webhook-code { margin: 0 0 24px; padding: 22px; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: #111814; color: #dff8e9; font: 14px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; tab-size: 2; }
+.webhook-code code { color: inherit; font: inherit; }
 .page-cta { margin-top: 20px; padding: clamp(28px, 4vw, 42px); border-radius: 8px; background: var(--ink); color: #fff; }
 .page-cta p { color: rgba(255,255,255,.72); }
 
@@ -489,6 +491,7 @@ html[data-theme="dark"] .faq-list details { background: var(--white); }
 html[data-theme="dark"] .compare-list { background: var(--white); }
 html[data-theme="dark"] .side-card { background: var(--white); }
 html[data-theme="dark"] .related-links a { background: var(--white); }
+html[data-theme="dark"] .webhook-code { background: #090d0b; color: #dff8e9; }
 html[data-theme="dark"] .download-section,
 html[data-theme="dark"] .page-cta { background: #0b0f0d; }
 html[data-theme="dark"] .item-icon { background: rgba(31,181,116,.16); }

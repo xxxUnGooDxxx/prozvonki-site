@@ -47,7 +47,7 @@
     <section class="section">
       <div class="content-grid content-grid-single">
         <div class="content-main">
-          <div><p>Last updated: August 25, 2026.</p></div>
+          <div><p>Last updated: September 25, 2026.</p></div>
 
           <div>
             <h2>1. Who processes the data</h2>
@@ -62,7 +62,7 @@
               <li>call comments, tags, importance and statuses;</li>
               <li>block and allow lists of numbers;</li>
               <li>CRM client cards, tasks and reminders;</li>
-              <li>call recordings (when created by the system) and app settings.</li>
+              <li>call recordings (when created by the system) and app settings — a recording leaves the device only when you explicitly enable upload to Bitrix24 or through the outgoing WebHook.</li>
             </ul>
             <p>This data is used locally to show the call log, contacts, statistics and cards. You can save a backup to a <code>.prozbak</code> file and protect it with a password — the file stays under your control.</p>
           </div>
@@ -93,6 +93,8 @@
             <h2>5. Optional features you enable yourself</h2>
             <p>Some features are off by default and work only if you configure them. In that case data is sent to systems that you specify:</p>
             <ul>
+              <li><strong>Bitrix24 and amoCRM integrations.</strong> If you connect your CRM, the app sends it the call data needed for the features you select, including phone numbers, time, direction, duration and selected client details. A call recording can also be sent to Bitrix24 only when you enable that option separately.</li>
+              <li><strong>Outgoing WebHook.</strong> If you enter your own URL, the app sends the selected call events, phone numbers, SIM labels and, through separate opt-ins, the contact name and call recording. The recipient is the server, n8n, Make or other service configured by you.</li>
               <li><strong>Cloud PBX integration.</strong> If you enter your PBX address and token, the app exchanges call data, including phone numbers, with your server. Data goes to a server you control.</li>
               <li><strong>Call reports by email.</strong> If you set up your own mail account (SMTP), call reports — including phone numbers, contact names, call times and durations — are sent to the address you specify through your mail service.</li>
               <li><strong>Forwarding incoming SMS to email (RuStore version only, beta).</strong> Available exclusively in the RuStore build, enabled manually, and sends SMS to an email address you specify. This feature does not exist in the Google Play version.</li>
@@ -136,7 +138,7 @@
             <p>We process data on the following bases (Art. 6 GDPR, and Russian Federal Law No. 152-FZ “On Personal Data”):</p>
             <ul>
               <li><strong>Performance of the app's functions</strong> — processing calls, contacts and the call log on the device, without which the dialer cannot work;</li>
-              <li><strong>Your consent</strong> — for optional features you enable yourself (PBX integration, email reports, SMS forwarding). You can withdraw consent at any time by turning the feature off;</li>
+              <li><strong>Your consent</strong> — for optional features you enable yourself (CRM and PBX integrations, outgoing WebHook, email reports, SMS forwarding). You can withdraw consent at any time by turning the feature off;</li>
               <li><strong>Legitimate interest</strong> — protecting against spam and fraud, keeping the app stable and secure, and anonymized analytics to improve it.</li>
             </ul>
           </div>

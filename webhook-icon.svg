@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">WebHook ProZvonki</title>
+  <desc id="desc">Стрелка исходящего события в защищённом контуре</desc>
+  <rect x="36" y="56" width="132" height="132" rx="28" fill="#e8f8f0" stroke="#15985d" stroke-width="12"/>
+  <path d="M94 146 178 62M132 62h46v46" fill="none" stroke="#15985d" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="76" cy="150" r="12" fill="#15985d"/>
+</svg>

@@ -47,7 +47,7 @@
     <section class="section">
       <div class="content-grid content-grid-single">
         <div class="content-main">
-          <div><p>Дата последнего обновления: 25 августа 2026 г.</p></div>
+          <div><p>Дата последнего обновления: 25 сентября 2026 г.</p></div>
 
           <div>
             <h2>1. Кто обрабатывает данные</h2>
@@ -62,7 +62,7 @@
               <li>комментарии к звонкам, теги, важность и статусы;</li>
               <li>черный и белый списки номеров;</li>
               <li>CRM-карточки клиентов, задачи и напоминания;</li>
-              <li>записи разговоров (если они создаются системой) и настройки приложения.</li>
+              <li>записи разговоров (если они создаются системой) и настройки приложения — запись покидает устройство только при явном включении отправки в Битрикс24 или через WebHook.</li>
             </ul>
             <p>Эти данные используются локально, чтобы показывать журнал, контакты, статистику и карточки. Резервную копию можно сохранить в файл <code>.prozbak</code> и защитить паролем — файл остаётся под вашим контролем.</p>
           </div>
@@ -93,6 +93,8 @@
             <h2>5. Дополнительные функции по вашему выбору</h2>
             <p>Часть функций отключена по умолчанию и работает только если вы сами их настроите. В этом случае данные отправляются в системы, которые указываете вы:</p>
             <ul>
+              <li><strong>Интеграции с Битрикс24 и amoCRM.</strong> Если вы подключите свою CRM, приложение передаёт в неё необходимые данные звонков, включая номера, время, направление, длительность и выбранные вами сведения о клиентах. В Битрикс24 также может передаваться запись разговора, только если вы отдельно включили эту настройку.</li>
+              <li><strong>Исходящий WebHook.</strong> Если вы укажете свой URL, приложение отправляет туда выбранные события звонков, номера, SIM-метки и, по отдельным переключателям, имя контакта и запись разговора. Получателем является настроенный вами сервер, n8n, Make или другой сервис.</li>
               <li><strong>Интеграция с облачной АТС (ОАТС).</strong> Если вы вводите адрес и токен своей АТС, приложение обменивается с вашим сервером данными о звонках, включая номера телефонов. Данные идут на сервер, которым управляете вы.</li>
               <li><strong>Отчёты по звонкам на email.</strong> Если вы настроите свою почту (SMTP), отчёты по звонкам — включая номера телефонов, имена контактов, время и длительность звонков — отправляются на указанный вами адрес через ваш почтовый сервис.</li>
               <li><strong>Пересылка входящих SMS на email (только версия RuStore, бета).</strong> Доступна исключительно в версии из RuStore, включается вручную и отправляет SMS на указанную вами почту. В версии для Google Play этой функции нет.</li>
@@ -136,7 +138,7 @@
             <p>Мы обрабатываем данные на следующих основаниях (ст. 6 GDPR, а также Федеральный закон № 152-ФЗ «О персональных данных»):</p>
             <ul>
               <li><strong>Исполнение функций приложения</strong> — обработка звонков, контактов и журнала на устройстве, без чего звонилка не может работать;</li>
-              <li><strong>Ваше согласие</strong> — для дополнительных функций, которые вы включаете сами (интеграция с АТС, отчёты на email, пересылка SMS). Согласие можно отозвать в любой момент, отключив функцию;</li>
+              <li><strong>Ваше согласие</strong> — для дополнительных функций, которые вы включаете сами (интеграции с CRM и АТС, WebHook, отчёты на email, пересылка SMS). Согласие можно отозвать в любой момент, отключив функцию;</li>
               <li><strong>Законный интерес</strong> — защита от спама и мошенничества, обеспечение стабильности и безопасности приложения, обезличенная аналитика для его улучшения.</li>
             </ul>
           </div>
@@ -213,7 +215,7 @@
       </div>
     </section>
   </main>
-  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/zapis-razgovorov-shizuku/">Запись разговоров</a><a href="/integraciya-megafon-vats/">Интеграция с Мегафон ВАТС</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/integraciya-amocrm/">Интеграция с amoCRM</a><a href="/obo-mne/">Обо мне</a></div></nav>
+  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/zapis-razgovorov-shizuku/">Запись разговоров</a><a href="/integraciya-megafon-vats/">Интеграция с Мегафон ВАТС</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/integraciya-amocrm/">Интеграция с amoCRM</a><a href="/integraciya-webhook/">Интеграция WebHook</a><a href="/obo-mne/">Обо мне</a></div></nav>
   <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Главная</a> · <a href="../#download">Скачать</a> · <a href="../privacy/">Конфиденциальность</a></span></footer>
 </body>
 </html>

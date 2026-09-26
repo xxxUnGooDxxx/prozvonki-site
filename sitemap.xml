@@ -264,8 +264,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-beeline-oats/"/>
   </url>
   <url>
+    <loc>https://pro-zvonki.ru/integraciya-webhook/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+  </url>
+  <url>
     <loc>https://pro-zvonki.ru/integraciya-bitrix24/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-integration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-bitrix24/"/>
@@ -279,7 +285,7 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/nastrojka-bitrix24/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/bitrix24-setup/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-bitrix24/"/>
@@ -293,7 +299,7 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/integraciya-amocrm/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-integration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-amocrm/"/>
@@ -307,7 +313,7 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/nastrojka-amocrm/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/amocrm-setup/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-amocrm/"/>
@@ -321,14 +327,14 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/zapis-razgovorov-shizuku/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/call-recording-shizuku/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-razgovorov-shizuku/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/zapis-zvonkov-android/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/android-call-recording/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/zapis-zvonkov-android/"/>
@@ -349,12 +355,14 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/privacy/</loc>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/privacy-en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/privacy/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/privacy-en/</loc>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/privacy-en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/privacy/"/>
