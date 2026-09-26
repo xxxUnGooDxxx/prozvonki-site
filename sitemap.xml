@@ -15,14 +15,14 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/faq/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/faq/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/faq/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/en/faq/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/faq/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/faq/"/>
@@ -265,9 +265,31 @@
   </url>
   <url>
     <loc>https://pro-zvonki.ru/integraciya-webhook/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-integration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/webhook-integration/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-integration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-webhook/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/nastrojka-webhook/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-webhook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-webhook/"/>
+  </url>
+  <url>
+    <loc>https://pro-zvonki.ru/en/webhook-setup/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-webhook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-webhook/"/>
   </url>
   <url>
     <loc>https://pro-zvonki.ru/integraciya-bitrix24/</loc>

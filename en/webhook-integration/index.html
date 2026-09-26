@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebHook for Android calls — events and recordings — ProZvonki</title>
+  <meta name="description" content="Outgoing WebHook in the ProZvonki Android dialer: call start and finish events, number, result, duration, SIM, contact name and call recording for n8n, Make, your CRM or server.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pro-zvonki.ru/en/webhook-integration/">
+  <link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/integraciya-webhook/">
+  <link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-integration/">
+  <link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/integraciya-webhook/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pro-zvonki.ru/en/webhook-integration/">
+  <meta property="og:title" content="WebHook for Android calls — ProZvonki">
+  <meta property="og:description" content="Send call events and recordings from ProZvonki to n8n, Make, your CRM or your own server.">
+  <meta property="og:image" content="https://pro-zvonki.ru/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WebHook for Android calls — ProZvonki">
+  <meta name="twitter:description" content="JSON call events, multipart recordings, Bearer token, SIM data and delivery retries.">
+  <meta name="twitter:image" content="https://pro-zvonki.ru/og-image.png">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../../styles.css">
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895','ym');ym(109706895,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProZvonki","item":"https://pro-zvonki.ru/en/"},{"@type":"ListItem","position":2,"name":"WebHook integration","item":"https://pro-zvonki.ru/en/webhook-integration/"}]},{"@type":"FAQPage","@id":"https://pro-zvonki.ru/en/webhook-integration/#faq","mainEntity":[{"@type":"Question","name":"Which events does ProZvonki send?","acceptedAnswer":{"@type":"Answer","text":"call_finished is sent after a call. You can also enable call_started, while recording_ready is sent as multipart when a call recording becomes available."}},{"@type":"Question","name":"Do I need my own server?","acceptedAnswer":{"@type":"Answer","text":"You need a reachable HTTPS URL. It can belong to your own server, n8n, Make or another service that accepts JSON and multipart/form-data POST requests."}},{"@type":"Question","name":"How is a call recording sent?","acceptedAnswer":{"@type":"Answer","text":"As a separate multipart/form-data request: JSON metadata is in the payload part and the binary audio file is in the recording part. Base64 is not used."}},{"@type":"Question","name":"What happens when the device is offline?","acceptedAnswer":{"@type":"Answer","text":"The app keeps delivery jobs and retries temporary network and server failures. The receiver must safely handle a repeated event_id."}},{"@type":"Question","name":"How do I secure the WebHook?","acceptedAnswer":{"@type":"Answer","text":"Use HTTPS and, when needed, a Bearer token. The URL and token are stored securely on the device."}}]}]}</script>
+  <script>(function(){try{var k='pz-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="ProZvonki"><span class="brand-mark"><img src="../../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Navigation"><a href="../android-dialer/">Dialer</a><a href="../call-crm/">CRM</a><a href="../client-call-tracking/">Call tracking</a><a href="../call-reports/">Reports</a><a href="/en/faq/">FAQ</a><a href="../../integraciya-webhook/" hreflang="ru" aria-label="Русская версия">RU</a></nav>
+    <a class="header-link" href="../#download">Download</a>
+  </header>
+  <main>
+    <section class="seo-page-hero">
+      <div class="seo-page-copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span><span>WebHook integration</span></nav>
+        <p class="eyebrow">Integrations · Automation</p>
+        <h1>WebHook for call events and recordings</h1>
+        <p class="lead-copy">ProZvonki sends phone-call data to your HTTPS endpoint: direction, result, duration, number, SIM and, optionally, the contact name. A call recording arrives in a separate multipart request. Connect the Android dialer to n8n, Make, your CRM, a bot or your own server.</p>
+        <p style="margin-top:28px"><a class="header-link" href="../webhook-setup/">Set up the WebHook →</a></p>
+      </div>
+      <div class="seo-visual" aria-label="ProZvonki outgoing WebHook">
+        <div class="seo-slideshow"><figure style="animation:none;opacity:1"><img src="../../webhook-icon.svg" alt="WebHook icon from the ProZvonki settings" width="400" height="400" style="max-width:min(320px,72%)"></figure></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-grid content-grid-single"><div class="content-main">
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>Connect any system</h2><p>The WebHook is not tied to a specific CRM. The receiver can be an n8n or Make workflow, an internal system, a Telegram bot, analytics, a helpdesk or your own CRM API. You only need an HTTPS endpoint that accepts POST requests.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></span>Call start and finish events</h2><p><code>call_finished</code> is sent after every eligible call. If you need real-time automation, enable the separate <code>call_started</code> event for incoming and outgoing calls. Both events share one stable <code>call_id</code>.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>Clear call data</h2><p>JSON includes a unique <code>event_id</code>, direction, result, who ended the call, the number or hidden-number flag, duration, UTC time, SIM slot and your manual SIM label. Sending the contact name is a separate opt-in.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M7 16V4h10v12"/><path d="M10 8h4M10 12h4"/></svg></span>Work SIM and custom labels</h2><p>On a dual-SIM phone, send events only for the selected work SIM or for both SIMs. Each slot can have a custom label, such as a department, carrier or work number. It arrives in <code>sim_label</code>.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 7v10M16 7v10M4 10v4M20 10v4"/></svg></span>Call recordings without Base64</h2><p>When call recording and “Send call recording” are enabled, ProZvonki sends a separate <code>recording_ready</code> event after the audio becomes available. The request uses <code>multipart/form-data</code>: JSON is in <code>payload</code> and the binary file is in <code>recording</code>.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/><path d="M21 12a9 9 0 1 1-5-8"/></svg></span>Background delivery and retries</h2><p>Events are delivered in the background. ProZvonki retries temporary network failures, timeouts and temporary server errors. Recording delivery survives app and device restarts. Repeated requests are possible, so the receiver should store <code>event_id</code> and avoid running the same action twice.</p></article>
+        <article><h2><span class="item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>HTTPS and Bearer token</h2><p>Use HTTPS. If your receiver requires authentication, enter a token and ProZvonki adds <code>Authorization: Bearer &lt;token&gt;</code>. The URL and token are stored in protected app settings. You can send a test event before the first real call.</p></article>
+      </div></div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head"><p class="eyebrow">FAQ</p><h2>Frequently asked questions about the WebHook</h2></div>
+      <div class="faq-list">
+        <details><summary>Which events does ProZvonki send?</summary><p><code>call_finished</code> is sent after a call. You can also enable <code>call_started</code>, while <code>recording_ready</code> is sent as multipart after a call recording becomes available.</p></details>
+        <details><summary>Do I need my own server?</summary><p>You need a reachable HTTPS URL. It can be your own server, n8n, Make or another service that accepts JSON and <code>multipart/form-data</code> POST requests.</p></details>
+        <details><summary>How is a call recording sent?</summary><p>In a separate multipart request: JSON metadata is in the <code>payload</code> part and the binary audio file is in the <code>recording</code> part. Base64 is not used.</p></details>
+        <details><summary>What happens when the device is offline?</summary><p>The app keeps delivery jobs and retries temporary network and server failures. Your receiver must safely handle a repeated <code>event_id</code>.</p></details>
+        <details><summary>How do I secure the WebHook?</summary><p>Use HTTPS and, when needed, a Bearer token. The URL and token are stored securely on the device. Do not expose a secret in a public address or server log.</p></details>
+        <details><summary>How is this different from Bitrix24 and amoCRM?</summary><p>Bitrix24 and amoCRM integrations perform ready-made CRM actions such as cards, calls, deals and tasks. The WebHook sends universal events to your endpoint, where you implement the processing logic.</p></details>
+      </div>
+      <div class="related-links"><a href="../webhook-setup/">Set up the WebHook</a><a href="../bitrix24-integration/">Bitrix24 integration</a><a href="../amocrm-integration/">amoCRM integration</a><a href="../call-recording-shizuku/">Set up call recording</a><a href="../call-crm/">Call CRM</a><a href="../#download">download ProZvonki</a></div>
+    </section>
+  </main>
+  <nav id="site-links" class="site-links" aria-label="All ProZvonki features"><div class="site-links-inner"><span class="site-links-title">All features</span><a href="/en/android-dialer/">Dialer</a><a href="/en/call-log/">Call log</a><a href="/en/block-spam-calls/">Spam blocking</a><a href="/en/incoming-call-screen/">Call screen</a><a href="/en/dual-sim-dialer/">Dual SIM</a><a href="/en/voice-dialing/">Voice dialing</a><a href="/en/sms-business-card/">SMS card</a><a href="/en/sms-to-email/">SMS to email</a><a href="/en/themes/">Themes</a><a href="/en/call-crm/">Call CRM</a><a href="/en/client-call-tracking/">Call tracking</a><a href="/en/post-call-tasks/">Post-call tasks</a><a href="/en/call-reports/">Reports</a><a href="/en/call-recording-shizuku/">Call recording</a><a href="/en/bitrix24-integration/">Bitrix24 integration</a><a href="/en/amocrm-integration/">amoCRM integration</a><a href="/en/webhook-integration/">WebHook integration</a><a href="/en/about-you/">About you</a></div></nav>
+  <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Home</a> · <a href="../#download">Download</a> · <a href="../../privacy-en/">Privacy</a></span></footer>
+</body>
+</html>

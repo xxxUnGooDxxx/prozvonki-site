@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Как настроить WebHook для звонков — пошаговая инструкция — ProZvonki</title>
+  <meta name="description" content="Пошаговая настройка исходящего WebHook в ProZvonki: HTTPS URL, Bearer-токен, события звонков, рабочая SIM, JSON, multipart-записи и повторная доставка.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pro-zvonki.ru/nastrojka-webhook/">
+  <link rel="alternate" hreflang="ru" href="https://pro-zvonki.ru/nastrojka-webhook/">
+  <link rel="alternate" hreflang="en" href="https://pro-zvonki.ru/en/webhook-setup/">
+  <link rel="alternate" hreflang="x-default" href="https://pro-zvonki.ru/nastrojka-webhook/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pro-zvonki.ru/nastrojka-webhook/">
+  <meta property="og:title" content="Как настроить WebHook для звонков — ProZvonki">
+  <meta property="og:description" content="Подключение исходящего WebHook, выбор событий и данных, JSON и multipart — пошагово.">
+  <meta property="og:image" content="https://pro-zvonki.ru/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Настройка WebHook для звонков — ProZvonki">
+  <meta name="twitter:description" content="HTTPS URL, Bearer-токен, события звонков, записи и защита от повторов.">
+  <meta name="twitter:image" content="https://pro-zvonki.ru/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../ProZvonki%20200%20na%20200.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706895','ym');ym(109706895,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProZvonki","item":"https://pro-zvonki.ru/"},{"@type":"ListItem","position":2,"name":"Интеграция через WebHook","item":"https://pro-zvonki.ru/integraciya-webhook/"},{"@type":"ListItem","position":3,"name":"Настройка WebHook","item":"https://pro-zvonki.ru/nastrojka-webhook/"}]},{"@type":"HowTo","name":"Как настроить исходящий WebHook в ProZvonki","description":"Подключение Android-звонилки ProZvonki к n8n, Make, своей CRM или собственному серверу через исходящий HTTP WebHook.","step":[{"@type":"HowToStep","position":1,"name":"Подготовить HTTPS URL","text":"Создайте адрес, который принимает POST-запросы и возвращает ответ 2xx после сохранения события."},{"@type":"HowToStep","position":2,"name":"Открыть настройки WebHook","text":"В ProZvonki откройте Настройки → вкладка Бизнес → Интеграции → WebHook и включите интеграцию."},{"@type":"HowToStep","position":3,"name":"Указать адрес и токен","text":"Вставьте URL и при необходимости Bearer-токен, затем нажмите Сохранить и отправить тест."},{"@type":"HowToStep","position":4,"name":"Выбрать события и данные","text":"Настройте call_started, имя контакта, запись разговора, рабочую SIM и метки SIM."},{"@type":"HowToStep","position":5,"name":"Настроить обработчик повторов","text":"Связывайте события по call_id и исключайте повторную обработку по event_id."}]},{"@type":"FAQPage","@id":"https://pro-zvonki.ru/nastrojka-webhook/#faq","mainEntity":[{"@type":"Question","name":"Какие ответы считать успешными?","acceptedAnswer":{"@type":"Answer","text":"Верните HTTP-код 2xx только после надёжного сохранения события и файла."}},{"@type":"Question","name":"Почему событие может прийти повторно?","acceptedAnswer":{"@type":"Answer","text":"Если ответ сервера потерялся или возникла временная ошибка, приложение повторит доставку с тем же event_id."}},{"@type":"Question","name":"Как передаётся запись разговора?","acceptedAnswer":{"@type":"Answer","text":"Запросом multipart/form-data: JSON находится в части payload, бинарный аудиофайл — в части recording."}}]}]}</script>
+  <script>(function(){try{var k='pz-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109706895" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="ProZvonki"><span class="brand-mark"><img src="../ProZvonki%20200%20na%20200.png" alt="" aria-hidden="true"></span><span>ProZvonki</span></a>
+    <nav class="top-nav" aria-label="Навигация"><a href="../zvonilka-android/">Звонилка</a><a href="../crm-dlya-zvonkov/">CRM</a><a href="../uchet-zvonkov-klientov/">Учет звонков</a><a href="../otchety-po-zvonkam/">Отчеты</a><a href="/faq/">Вопросы</a><a href="../en/webhook-setup/" hreflang="en" aria-label="English version">EN</a></nav>
+    <a class="header-link" href="../#download">Скачать</a>
+  </header>
+  <main>
+    <section class="seo-page-hero">
+      <div class="seo-page-copy">
+        <nav class="breadcrumb" aria-label="Хлебные крошки"><a href="../">Главная</a><span>/</span><a href="../integraciya-webhook/">Интеграция через WebHook</a><span>/</span><span>Настройка</span></nav>
+        <p class="eyebrow">Пошаговая инструкция</p>
+        <h1>Как настроить исходящий WebHook</h1>
+        <p class="lead-copy">Подключение занимает несколько минут: подготовьте HTTPS-адрес, вставьте его в ProZvonki, отправьте тест и выберите нужные события. Ниже — порядок настройки и точный формат запросов.</p>
+      </div>
+      <div class="seo-visual" aria-label="Значок WebHook ProZvonki">
+        <div class="seo-slideshow"><figure style="animation:none;opacity:1"><img src="../webhook-icon.svg" alt="Значок WebHook из настроек ProZvonki" width="400" height="400" style="max-width:min(320px,72%)"></figure></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-grid content-grid-single"><div class="content-main">
+        <article><h2>Шаг 1. Подготовьте HTTPS-адрес</h2><p>Создайте WebHook в n8n, Make или своей системе. Обработчик должен принимать POST, читать JSON и возвращать код 2xx только после того, как событие надёжно сохранено.</p></article>
+        <article><h2>Шаг 2. Откройте настройки ProZvonki</h2><p>Перейдите в <strong>Настройки → вкладка «Бизнес» → Интеграции → WebHook</strong> и включите интеграцию.</p></article>
+        <article><h2>Шаг 3. Введите URL и токен</h2><p>Вставьте полный HTTPS URL. Если на сервере настроена Bearer-авторизация, укажите токен. Нажмите <strong>«Сохранить и отправить тест»</strong> и убедитесь, что приложение сообщает об успешной отправке.</p></article>
+        <article><h2>Шаг 4. Выберите данные и события</h2><p>Включите <code>call_started</code>, если событие нужно уже в момент звонка. Отдельно решите, передавать ли имя контакта и запись разговора. На телефоне с двумя SIM выберите рабочую SIM и задайте понятные метки.</p></article>
+        <article><h2>Шаг 5. Защититесь от повторов</h2><p>Сохраняйте обработанные значения <code>event_id</code>. Если сервер получил запрос, но ответ потерялся, телефон отправит то же событие повторно. Для событий одного разговора используйте общий <code>call_id</code>.</p></article>
+        <article><h2>Пример события завершения звонка</h2><p>Неприменимые поля передаются как <code>null</code>, поэтому структура JSON остаётся предсказуемой.</p></article>
+        <pre class="webhook-code"><code>{
+  "event_id": "550e8400-e29b-41d4-a716-446655440000",
+  "call_id": "663dbf58-1bfd-4a59-a3af-bad6f9511cec",
+  "event": "call_finished",
+  "direction": "incoming",
+  "result": "answered",
+  "ended_by": "remote",
+  "number": "+79001234567",
+  "hidden": false,
+  "contact_name": "Иван Петров",
+  "contact_name_source": "contacts",
+  "duration_sec": 42,
+  "timestamp": "2026-09-25T10:30:00Z",
+  "timestamp_unix": 1790332200,
+  "sim_slot": 0,
+  "sim_label": "Рабочая SIM"
+}</code></pre>
+        <article><h2>Формат записи разговора</h2><p><code>recording_ready</code> приходит запросом <code>multipart/form-data</code>. Часть <code>payload</code> содержит JSON с <code>event_id</code>, тем же <code>call_id</code>, номером, направлением, длительностью, именем файла, форматом и размером. Часть <code>recording</code> содержит сам аудиофайл. Серверу не нужно декодировать Base64.</p></article>
+        <article><h2>Какие ответы считать успешными</h2><p>Верните любой HTTP-код 2xx только после сохранения события и файла. Для временной проблемы верните 408, 425, 429 или 5xx — приложение повторит попытку. Ответы 401/403 означают, что нужно исправить URL, токен или права доступа.</p></article>
+        <div class="related-links"><a href="../integraciya-webhook/">Возможности WebHook</a><a href="../nastrojka-bitrix24/">Настройка Битрикс24</a><a href="../nastrojka-amocrm/">Настройка amoCRM</a><a href="../zapis-razgovorov-shizuku/">Настройка записи разговоров</a><a href="../#download">скачать ProZvonki</a></div>
+      </div></div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head"><p class="eyebrow">FAQ</p><h2>Частые вопросы о настройке WebHook</h2></div>
+      <div class="faq-list">
+        <details><summary>Какие ответы считать успешными?</summary><p>Верните HTTP-код 2xx только после того, как событие и файл надёжно сохранены. Иначе при потере ответа данные могут считаться доставленными преждевременно.</p></details>
+        <details><summary>Почему событие может прийти повторно?</summary><p>Если ответ сервера потерялся или возникла временная сетевая ошибка, приложение повторит доставку с тем же <code>event_id</code>. Обработчик должен быть идемпотентным.</p></details>
+        <details><summary>Что проверить, если тест не проходит?</summary><p>Проверьте полный HTTPS URL, доступность обработчика из интернета, Bearer-токен и журналы принимающего сервера. Успешный обработчик должен вернуть 2xx.</p></details>
+        <details><summary>Можно ли использовать HTTP вместо HTTPS?</summary><p>Используйте HTTPS. Обычный HTTP блокируется политикой безопасности Android, кроме явно разрешённых локальных адресов для разработки.</p></details>
+        <details><summary>Как передаётся запись разговора?</summary><p>Отдельным multipart-запросом: JSON-метаданные находятся в части <code>payload</code>, бинарный аудиофайл — в части <code>recording</code>. Base64 не используется.</p></details>
+      </div>
+    </section>
+  </main>
+  <nav id="site-links" class="site-links" aria-label="Все возможности ProZvonki"><div class="site-links-inner"><span class="site-links-title">Все возможности</span><a href="/zvonilka-android/">Звонилка</a><a href="/zhurnal-zvonkov/">Журнал звонков</a><a href="/opredelitel-nomera/">Определитель номера</a><a href="/blokirovka-spam-zvonkov/">Блокировка спама</a><a href="/ekran-vhodyashchego-zvonka/">Экран входящего</a><a href="/zvonilka-dlya-dvuh-sim/">Две SIM</a><a href="/golosovoy-nabor/">Голосовой набор</a><a href="/sms-vizitka/">SMS-визитка</a><a href="/peresylka-sms-na-pochtu/">Пересылка SMS</a><a href="/temy-oformleniya/">Темы</a><a href="/crm-dlya-zvonkov/">CRM для звонков</a><a href="/uchet-zvonkov-klientov/">Учёт звонков</a><a href="/zadachi-posle-zvonka/">Задачи после звонка</a><a href="/otchety-po-zvonkam/">Отчёты</a><a href="/zapis-razgovorov-shizuku/">Запись разговоров</a><a href="/integraciya-megafon-vats/">Интеграция с Мегафон ВАТС</a><a href="/integraciya-beeline-oats/">Интеграция с Билайн ОАТС</a><a href="/integraciya-bitrix24/">Интеграция с Битрикс24</a><a href="/integraciya-amocrm/">Интеграция с amoCRM</a><a href="/integraciya-webhook/">Интеграция WebHook</a><a href="/obo-mne/">Обо мне</a></div></nav>
+  <footer class="site-footer"><strong>ProZvonki</strong><span><a href="../">Главная</a> · <a href="../#download">Скачать</a> · <a href="../privacy/">Конфиденциальность</a></span></footer>
+</body>
+</html>
