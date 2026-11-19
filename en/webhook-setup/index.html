@@ -51,7 +51,7 @@
         <article><h2>Step 1. Prepare an HTTPS URL</h2><p>Create a WebHook in n8n, Make or your own system. The receiver must accept POST requests, read JSON and return 2xx only after the event has been stored safely.</p></article>
         <article><h2>Step 2. Open the ProZvonki settings</h2><p>Go to <strong>Settings → the “Business” tab → Integrations → WebHook</strong> and enable the integration.</p></article>
         <article><h2>Step 3. Enter the URL and token</h2><p>Paste the full HTTPS URL. If the receiver uses Bearer authentication, enter the token. Tap <strong>“Save and send test”</strong> and make sure the app reports a successful request.</p></article>
-        <article><h2>Step 4. Choose events and data</h2><p>Enable <code>call_started</code> if you need an event as soon as a call begins. Separately decide whether to send the contact name and call recording. On a dual-SIM phone, choose the work SIM and add clear labels.</p></article>
+        <article><h2>Step 4. Choose events and data</h2><p>Enable <code>call_started</code> if you need an event as soon as a call begins. Separately decide whether to send the contact name, call recording, transcript text and conversation summary. The transcript and summary toggles are available only when transcription is set up. On a dual-SIM phone, choose the work SIM and add clear labels.</p></article>
         <article><h2>Step 5. Make processing duplicate-safe</h2><p>Store processed <code>event_id</code> values. If the server receives a request but its response is lost, the phone sends the same event again. Use the shared <code>call_id</code> to link all events for one call.</p></article>
         <article><h2>Example call-finished event</h2><p>Fields that do not apply are sent as <code>null</code>, so the JSON structure remains predictable.</p></article>
         <pre class="webhook-code"><code>{
@@ -72,6 +72,20 @@
   "sim_label": "Work SIM"
 }</code></pre>
         <article><h2>Call-recording format</h2><p><code>recording_ready</code> arrives as <code>multipart/form-data</code>. The <code>payload</code> part contains JSON with <code>event_id</code>, the same <code>call_id</code>, number, direction, duration, file name, format and size. The <code>recording</code> part contains the audio file itself. The server does not need to decode Base64.</p></article>
+        <article><h2>Transcript and summary events</h2><p>When the matching toggles are on, separate <code>transcript_ready</code> (transcript text) and <code>summary_ready</code> (short summary) events arrive after the call. They are sent <strong>not immediately</strong>, but once the text is ready: transcription and the summary run on the phone itself and take from a few seconds to a few minutes. Each event carries the same <code>call_id</code> as the other events of that call, so you can reliably link them to the right conversation on your server. The text is in the <code>transcript</code> or <code>summary</code> field. Both toggles can be enabled only if transcription is set up in the app (and, for the summary, summarization as well).</p>
+        <pre class="webhook-code"><code>{
+  "event_id": "7c1f2e90-5a3b-4f21-9d84-2b7c0e5a1f33",
+  "call_id": "663dbf58-1bfd-4a59-a3af-bad6f9511cec",
+  "event": "transcript_ready",
+  "direction": "incoming",
+  "number": "+79001234567",
+  "hidden": false,
+  "transcript": "— Hello, good afternoon… — Yes, I'm listening…",
+  "summary": null,
+  "timestamp": "2026-09-25T10:33:10Z",
+  "timestamp_unix": 1790332390
+}</code></pre>
+        <p>The <code>summary_ready</code> event has the same shape, but the text comes in the <code>summary</code> field (and <code>transcript</code> is <code>null</code>). Both are plain JSON POSTs like <code>call_finished</code>; no audio file is attached.</p></article>
         <article><h2>Which responses count as successful</h2><p>Return any 2xx HTTP response only after saving the event and file. For a temporary problem return 408, 425, 429 or 5xx and the app retries. Responses 401/403 mean the URL, token or access rules need to be corrected.</p></article>
         <div class="related-links"><a href="../webhook-integration/">WebHook features</a><a href="../bitrix24-setup/">Bitrix24 setup</a><a href="../amocrm-setup/">amoCRM setup</a><a href="../call-recording-shizuku/">Call recording setup</a><a href="../#download">download ProZvonki</a></div>
       </div></div>
